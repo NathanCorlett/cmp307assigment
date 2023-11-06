@@ -45,6 +45,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -67,11 +68,11 @@
     <Compile Include="asset.cs">
       <DependentUpon>ScottishGlenModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DeleteAsset.cs">
+    <Compile Include="DeleteUpdateAsset.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeleteAsset.Designer.cs">
-      <DependentUpon>DeleteAsset.cs</DependentUpon>
+    <Compile Include="DeleteUpdateAsset.Designer.cs">
+      <DependentUpon>DeleteUpdateAsset.cs</DependentUpon>
     </Compile>
     <Compile Include="Department.cs">
       <DependentUpon>ScottishGlenModel.tt</DependentUpon>
@@ -110,8 +111,8 @@
     <EmbeddedResource Include="AddAsset.resx">
       <DependentUpon>AddAsset.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeleteAsset.resx">
-      <DependentUpon>DeleteAsset.cs</DependentUpon>
+    <EmbeddedResource Include="DeleteUpdateAsset.resx">
+      <DependentUpon>DeleteUpdateAsset.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

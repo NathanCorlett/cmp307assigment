@@ -8,6 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Net;
+using System.CodeDom;
+using System.Management.Instrumentation;
+using System.Diagnostics;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Management;
+
 
 namespace cmp307
 {
@@ -37,6 +44,12 @@ namespace cmp307
                 NewAsset.HardwareID = ID;
                 NewAsset.AssetName = AddAssetTextBox.Text;
                 NewAsset.EmployeeResponsible = Convert.ToInt32(AddAssetEmployeeIDTextBox.Text);
+                NewAsset.model = ModelBox.Text;
+                NewAsset.manufacturer = ManufacturerBox.Text;
+                NewAsset.type = TypeBox.Text;
+                NewAsset.IPadress = IPTextBox.Text;
+                NewAsset.DatePurchesed = DateTime.Parse(DateBox.Text);
+                NewAsset.SystemName = systemnamebox.Text;
                 NewAsset.comment = AddAssetCommentTextBox.Text;
                 if (Employee.CheckIfExists(NewAsset.EmployeeResponsible) == false)
                 {
@@ -61,6 +74,40 @@ namespace cmp307
             this.Hide();
             form.ShowDialog();
             this.Close();
+
+
+        }
+
+        private void AddAsset_Load(object sender, EventArgs e)
+        {
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+                {
+                    string IPadress = ip.ToString();
+                    IPTextBox.Text = IPadress;
+                }
+            }
+
+            string mechinename = Environment.MachineName;
+            systemnamebox.Text = mechinename;
+
+            System.OperatingSystem OStype = System.Environment.OSVersion;
+            TypeBox.Text = OStype.ToString();
+
+            ManagementClass mc = new ManagementClass("Win32_computerSystem");
+            ManagementObjectCollection moc = mc.GetInstances();
+            if (moc.Count != 0)
+            {
+                foreach (ManagementObject mo in mc.GetInstances())
+                {
+                    ManufacturerBox.Text = mo["Manufacturer"].ToString();
+                    ModelBox.Text = mo["model"].ToString();
+
+
+                }
+            }
 
 
         }

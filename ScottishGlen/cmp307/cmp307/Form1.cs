@@ -31,7 +31,7 @@ namespace cmp307
 
         private void DeleteAsset_Click(object sender, EventArgs e)
         {
-            DeleteAsset deleteAsset = new DeleteAsset();
+            DeleteUpdateAsset deleteAsset = new DeleteUpdateAsset();
             this.Hide();
             deleteAsset.ShowDialog(); 
             this.Close();

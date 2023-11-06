@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="mssql2100902Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="mssql2100902Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="assets">
           <Key>
             <PropertyRef Name="HardwareID" />
@@ -13,6 +13,12 @@
           <Property Name="EmployeeResponsible" Type="int" Nullable="false" />
           <Property Name="AssetName" Type="varchar" MaxLength="255" />
           <Property Name="comment" Type="varchar" MaxLength="255" />
+          <Property Name="model" Type="varchar" MaxLength="255" />
+          <Property Name="manufacturer" Type="varchar" MaxLength="255" />
+          <Property Name="type" Type="varchar" MaxLength="255" />
+          <Property Name="IPadress" Type="varchar" MaxLength="255" />
+          <Property Name="DatePurchesed" Type="date" />
+          <Property Name="SystemName" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Department">
           <Key>
@@ -68,8 +74,7 @@
             <End Role="Employee" EntitySet="Employee" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="mssql2100902Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -82,6 +87,12 @@
           <Property Name="AssetName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="comment" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Employee" Relationship="Self.FK__assets__Employee__489AC854" FromRole="assets" ToRole="Employee" />
+          <Property Name="model" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="manufacturer" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="type" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="IPadress" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DatePurchesed" Type="DateTime" Precision="0" />
+          <Property Name="SystemName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Department">
           <Key>
@@ -149,6 +160,12 @@
           <EntitySetMapping Name="assets">
             <EntityTypeMapping TypeName="mssql2100902Model.asset">
               <MappingFragment StoreEntitySet="assets">
+                <ScalarProperty Name="SystemName" ColumnName="SystemName" />
+                <ScalarProperty Name="DatePurchesed" ColumnName="DatePurchesed" />
+                <ScalarProperty Name="IPadress" ColumnName="IPadress" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="manufacturer" ColumnName="manufacturer" />
+                <ScalarProperty Name="model" ColumnName="model" />
                 <ScalarProperty Name="HardwareID" ColumnName="HardwareID" />
                 <ScalarProperty Name="EmployeeResponsible" ColumnName="EmployeeResponsible" />
                 <ScalarProperty Name="AssetName" ColumnName="AssetName" />

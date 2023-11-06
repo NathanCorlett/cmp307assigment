@@ -20,13 +20,13 @@ namespace cmp307
         {
             this.assets = new HashSet<asset>();
         }
-    
+
         public int EmployeeID { get; set; }
         public string FName { get; set; }
         public string SName { get; set; }
         public string Email { get; set; }
         public Nullable<int> DepartmentID { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<asset> assets { get; set; }
         public virtual Department Department { get; set; }
@@ -46,9 +46,9 @@ namespace cmp307
                     return false;
                 }
             }
-               
 
-            
+
+
         }
     }
 }

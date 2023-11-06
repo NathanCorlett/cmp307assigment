@@ -1,6 +1,6 @@
 ﻿namespace cmp307
 {
-    partial class DeleteAsset
+    partial class DeleteUpdateAsset
     {
         /// <summary>
         /// Required designer variable.
@@ -126,7 +126,7 @@
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(570, 135);
+            this.DeleteButton.Location = new System.Drawing.Point(561, 353);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(123, 82);
             this.DeleteButton.TabIndex = 4;
@@ -184,12 +184,13 @@
             // 
             // Edit
             // 
-            this.Edit.Location = new System.Drawing.Point(421, 135);
+            this.Edit.Location = new System.Drawing.Point(432, 353);
             this.Edit.Name = "Edit";
             this.Edit.Size = new System.Drawing.Size(123, 82);
             this.Edit.TabIndex = 11;
-            this.Edit.Text = "Delete asset";
+            this.Edit.Text = "update asset";
             this.Edit.UseVisualStyleBackColor = true;
+            this.Edit.Click += new System.EventHandler(this.Edit_Click);
             // 
             // BackButton
             // 
