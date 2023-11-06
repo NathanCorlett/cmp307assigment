@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using static System.Data.Entity.Infrastructure.Design.Executor;
+
 namespace cmp307
 {
     using System;
@@ -81,5 +83,10 @@ namespace cmp307
             }
         }
 
+
+
     }
 }
+//var find = update.inventories.Where(e => e.Product_ID == ToUpdate.Product_ID).SingleOrDefault<inventory>();
+//find.NoInStock = ToUpdate.NoInStock;
+//update.SaveChanges();

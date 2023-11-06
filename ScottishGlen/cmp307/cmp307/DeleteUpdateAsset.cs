@@ -7,10 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<
 
 namespace cmp307
 {
     public partial class DeleteUpdateAsset : Form
+
     {
         public DeleteUpdateAsset()
         {
@@ -78,7 +80,9 @@ namespace cmp307
             this.Close();
         }
 
+
         private void Edit_Click(object sender, EventArgs e)
+
         {
             try
             {

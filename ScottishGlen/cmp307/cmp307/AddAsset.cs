@@ -16,6 +16,8 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Management;
 
 
+
+
 namespace cmp307
 {
     public partial class AddAsset : Form
@@ -86,7 +88,9 @@ namespace cmp307
                 if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
                 {
                     string IPadress = ip.ToString();
+
                     IPTextBox.Text = IPadress;
+
                 }
             }
 
@@ -106,10 +110,12 @@ namespace cmp307
                     ModelBox.Text = mo["model"].ToString();
 
 
+
                 }
             }
 
 
         }
+
     }
 }
