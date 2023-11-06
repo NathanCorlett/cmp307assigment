@@ -19,6 +19,8 @@ namespace cmp307
 
         private void DeleteAsset_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'mssql2100902DataSet2.assets' table. You can move, or remove it, as needed.
+            this.assetsTableAdapter1.Fill(this.mssql2100902DataSet2.assets);
             // TODO: This line of code loads data into the 'mssql2100902DataSet.assets' table. You can move, or remove it, as needed.
             this.assetsTableAdapter.Fill(this.mssql2100902DataSet.assets);
 
@@ -32,6 +34,12 @@ namespace cmp307
                 EmployeeTextBox.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
                 AssetNameTextBox.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
                 CommentTextBox.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                ModelBox.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                ManufacturerBox.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                TypeBox.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                IPTextBox.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+                DateBox.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+                systemnamebox.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
             }
             
            
@@ -42,17 +50,17 @@ namespace cmp307
             try
             {
                 long ID = Convert.ToInt64(txtSelectedAsset.Text);
-                DialogResult dialogResult = MessageBox.Show("are you sure you want to delete the asset" + ID, "Confirmation ", MessageBoxButtons.YesNo);
+                DialogResult dialogResults = MessageBox.Show("are you sure you want to delete the asset " + ID, "Confirmation ", MessageBoxButtons.YesNo);
+ 
 
-
-                if (dialogResult == DialogResult.OK)
+                if (dialogResults == DialogResult.Yes)
                 {
                     asset.DeleteAsset(ID);
                     MessageBox.Show("asset deleted");
                    
 
                 }
-                else if (dialogResult == DialogResult.Cancel)
+                else if (dialogResults == DialogResult.Cancel)
                 {
                     return;
                 }
@@ -61,13 +69,22 @@ namespace cmp307
             {
                 MessageBox.Show("please make sure to select an option");
             }
-
             txtSelectedAsset.Clear();
             EmployeeTextBox.Clear();
             AssetNameTextBox.Clear();
             CommentTextBox.Clear();
+            ModelBox.Clear();
+            ManufacturerBox.Clear();
+            TypeBox.Clear();
+            IPTextBox.Clear();
+            DateBox.Clear();
+            systemnamebox.Clear();
+            this.assetsTableAdapter1.Fill(this.mssql2100902DataSet2.assets);
             dataGridView1.Update();
             dataGridView1.Refresh();
+            this.Update();
+            this.Refresh();
+
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -86,7 +103,13 @@ namespace cmp307
                 ToUpdate.HardwareID = (int)(long)Convert.ToDouble(txtSelectedAsset.Text);
                 ToUpdate.AssetName = AssetNameTextBox.Text;
                 ToUpdate.EmployeeResponsible = Convert.ToInt32(EmployeeTextBox.Text);
+                ToUpdate.model = ModelBox.Text;
+                ToUpdate.type = TypeBox.Text;
+                ToUpdate.IPadress = IPTextBox.Text;
+                ToUpdate.DatePurchesed = DateTime.Parse(DateBox.Text);
+                ToUpdate.SystemName = systemnamebox.Text;
                 ToUpdate.comment = CommentTextBox.Text;
+                ToUpdate.manufacturer = ManufacturerBox.Text;
 
                 if (Employee.CheckIfExists(ToUpdate.EmployeeResponsible) == false)
                 {
@@ -108,8 +131,35 @@ namespace cmp307
             EmployeeTextBox.Clear();
             AssetNameTextBox.Clear();
             CommentTextBox.Clear();
+            ModelBox.Clear();
+            ManufacturerBox.Clear();
+            TypeBox.Clear();
+            IPTextBox.Clear();
+            DateBox.Clear();
+            systemnamebox.Clear();
+            this.assetsTableAdapter1.Fill(this.mssql2100902DataSet2.assets);
             dataGridView1.Update();
             dataGridView1.Refresh();
+            this.Update();
+            this.Refresh();
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.CurrentCell.RowIndex != -1)
+            {
+                txtSelectedAsset.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                EmployeeTextBox.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                AssetNameTextBox.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                CommentTextBox.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                ModelBox.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                ManufacturerBox.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                TypeBox.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                IPTextBox.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+                DateBox.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+                systemnamebox.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+            }
         }
     }
 }

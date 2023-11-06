@@ -80,6 +80,8 @@ namespace cmp307
 
         private void AddAsset_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'mssql2100902DataSet1.Employee' table. You can move, or remove it, as needed.
+            this.employeeTableAdapter.Fill(this.mssql2100902DataSet1.Employee);
             var host = Dns.GetHostEntry(Dns.GetHostName());
             foreach (var ip in host.AddressList)
             {
@@ -109,6 +111,19 @@ namespace cmp307
                 }
             }
 
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.CurrentCell.RowIndex != -1)
+            {
+                AddAssetEmployeeIDTextBox.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            }
+        }
+
+        private void AddAssetTextBox_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
