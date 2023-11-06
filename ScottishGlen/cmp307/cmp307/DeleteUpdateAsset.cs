@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Data.Entity.Infrastructure.Design.Executor;
 
 namespace cmp307
 {
-    public partial class DeleteAsset : Form
+    public partial class DeleteUpdateAsset : Form  //THIS PAGE BOTH DELETES AND UPDATES (WAS CHANGED PARTWAY THOUGH)
     {
-        public DeleteAsset()
+        public DeleteUpdateAsset()
         {
             InitializeComponent();
         }
@@ -76,6 +77,40 @@ namespace cmp307
             this.Hide();
             form.ShowDialog();
             this.Close();
+        }
+
+        private void UpdateAssetButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                asset ToUpdate = new asset();
+                ToUpdate.HardwareID = (int)(long)Convert.ToDouble(txtSelectedAsset.Text);
+                ToUpdate.AssetName = AssetNameTextBox.Text;
+                ToUpdate.EmployeeResponsible = Convert.ToInt32(EmployeeTextBox.Text);
+                ToUpdate.comment = CommentTextBox.Text;
+
+                if (Employee.CheckIfExists(ToUpdate.EmployeeResponsible) == false)
+                {
+                    MessageBox.Show("this employee does not exist please try again");
+                    return;
+                }
+
+                asset.UpdateAsset(ToUpdate);
+
+                MessageBox.Show("asset updated");
+
+            }
+            catch
+            {
+                MessageBox.Show("make sure all data is enterd correctly, Employee ID can not have letters");
+            }
+
+            txtSelectedAsset.Clear();
+            EmployeeTextBox.Clear();
+            AssetNameTextBox.Clear();
+            CommentTextBox.Clear();
+            dataGridView1.Update();
+            dataGridView1.Refresh();
         }
     }
 }

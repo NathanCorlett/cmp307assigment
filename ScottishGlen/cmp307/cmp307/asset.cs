@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using static System.Data.Entity.Infrastructure.Design.Executor;
+
 namespace cmp307
 {
     using System;
@@ -61,6 +63,22 @@ namespace cmp307
                 check.SaveChanges();
             }
         }
+
+        public static void UpdateAsset(asset toUpdate)
+        {
+            using (mssql2100902Entities update = new mssql2100902Entities())
+            {
+                var find = update.assets.Where(e => e.HardwareID == toUpdate.HardwareID).SingleOrDefault<asset>();
+                find.AssetName = toUpdate.AssetName;
+                find.EmployeeResponsible = toUpdate.EmployeeResponsible;
+                find.comment = toUpdate.comment;
+                update.SaveChanges();
+
+            }
+        }
        
     }
 }
+//var find = update.inventories.Where(e => e.Product_ID == ToUpdate.Product_ID).SingleOrDefault<inventory>();
+//find.NoInStock = ToUpdate.NoInStock;
+//update.SaveChanges();
