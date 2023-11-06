@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.AddAsset = new System.Windows.Forms.Button();
-            this.UpdateAsset = new System.Windows.Forms.Button();
             this.DeleteAsset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -43,22 +42,13 @@
             this.AddAsset.UseVisualStyleBackColor = true;
             this.AddAsset.Click += new System.EventHandler(this.AddAsset_Click);
             // 
-            // UpdateAsset
-            // 
-            this.UpdateAsset.Location = new System.Drawing.Point(15, 100);
-            this.UpdateAsset.Name = "UpdateAsset";
-            this.UpdateAsset.Size = new System.Drawing.Size(140, 80);
-            this.UpdateAsset.TabIndex = 2;
-            this.UpdateAsset.Text = "Update Asset";
-            this.UpdateAsset.UseVisualStyleBackColor = true;
-            // 
             // DeleteAsset
             // 
             this.DeleteAsset.Location = new System.Drawing.Point(161, 14);
             this.DeleteAsset.Name = "DeleteAsset";
             this.DeleteAsset.Size = new System.Drawing.Size(140, 80);
             this.DeleteAsset.TabIndex = 3;
-            this.DeleteAsset.Text = "Delete Asset";
+            this.DeleteAsset.Text = "Delete/update Asset";
             this.DeleteAsset.UseVisualStyleBackColor = true;
             this.DeleteAsset.Click += new System.EventHandler(this.DeleteAsset_Click);
             // 
@@ -68,7 +58,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.DeleteAsset);
-            this.Controls.Add(this.UpdateAsset);
             this.Controls.Add(this.AddAsset);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -79,7 +68,6 @@
         #endregion
 
         private System.Windows.Forms.Button AddAsset;
-        private System.Windows.Forms.Button UpdateAsset;
         private System.Windows.Forms.Button DeleteAsset;
     }
 }

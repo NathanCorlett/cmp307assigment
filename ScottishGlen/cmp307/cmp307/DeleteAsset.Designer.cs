@@ -40,6 +40,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSelectedAsset = new System.Windows.Forms.TextBox();
             this.DeleteButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.CommentTextBox = new System.Windows.Forms.TextBox();
+            this.AssetNameTextBox = new System.Windows.Forms.TextBox();
+            this.EmployeeTextBox = new System.Windows.Forms.TextBox();
+            this.Edit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet)).BeginInit();
@@ -55,7 +62,7 @@
             this.assetNameDataGridViewTextBoxColumn,
             this.commentDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.assetsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 9);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(403, 423);
             this.dataGridView1.TabIndex = 0;
@@ -118,18 +125,82 @@
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(466, 257);
+            this.DeleteButton.Location = new System.Drawing.Point(665, 242);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(123, 82);
             this.DeleteButton.TabIndex = 4;
             this.DeleteButton.Text = "Delete asset";
             this.DeleteButton.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(473, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Employee:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(478, 98);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Comment:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(464, 72);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Asset name:";
+            // 
+            // CommentTextBox
+            // 
+            this.CommentTextBox.Location = new System.Drawing.Point(535, 95);
+            this.CommentTextBox.Name = "CommentTextBox";
+            this.CommentTextBox.Size = new System.Drawing.Size(129, 20);
+            this.CommentTextBox.TabIndex = 8;
+            // 
+            // AssetNameTextBox
+            // 
+            this.AssetNameTextBox.Location = new System.Drawing.Point(535, 69);
+            this.AssetNameTextBox.Name = "AssetNameTextBox";
+            this.AssetNameTextBox.Size = new System.Drawing.Size(129, 20);
+            this.AssetNameTextBox.TabIndex = 9;
+            // 
+            // EmployeeTextBox
+            // 
+            this.EmployeeTextBox.Location = new System.Drawing.Point(535, 46);
+            this.EmployeeTextBox.Name = "EmployeeTextBox";
+            this.EmployeeTextBox.Size = new System.Drawing.Size(129, 20);
+            this.EmployeeTextBox.TabIndex = 10;
+            // 
+            // Edit
+            // 
+            this.Edit.Location = new System.Drawing.Point(481, 242);
+            this.Edit.Name = "Edit";
+            this.Edit.Size = new System.Drawing.Size(123, 82);
+            this.Edit.TabIndex = 11;
+            this.Edit.Text = "Delete asset";
+            this.Edit.UseVisualStyleBackColor = true;
+            // 
             // DeleteAsset
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Edit);
+            this.Controls.Add(this.EmployeeTextBox);
+            this.Controls.Add(this.AssetNameTextBox);
+            this.Controls.Add(this.CommentTextBox);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.txtSelectedAsset);
             this.Controls.Add(this.label1);
@@ -158,5 +229,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSelectedAsset;
         private System.Windows.Forms.Button DeleteButton;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox CommentTextBox;
+        private System.Windows.Forms.TextBox AssetNameTextBox;
+        private System.Windows.Forms.TextBox EmployeeTextBox;
+        private System.Windows.Forms.Button Edit;
     }
 }
