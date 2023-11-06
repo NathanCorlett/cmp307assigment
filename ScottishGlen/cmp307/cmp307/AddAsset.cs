@@ -21,31 +21,38 @@ namespace cmp307
 
         private void AddAssetButton_Click(object sender, EventArgs e)
         {
-            bool HWIDCHECK = false;
-            int ID = 0;
-            asset NewAsset = new asset();
+            try
+            {
+                bool HWIDCHECK = false;
+                int ID = 0;
+                asset NewAsset = new asset();
 
-            do
-            {
-                ID = random.Next();
-                HWIDCHECK = asset.CheckIDNum(ID);
+                do
+                {
+                    ID = random.Next();
+                    HWIDCHECK = asset.CheckIDNum(ID);
+                }
+                while (HWIDCHECK == false);
+
+                NewAsset.HardwareID = ID;
+                NewAsset.AssetName = AddAssetTextBox.Text;
+                NewAsset.EmployeeResponsible = Convert.ToInt32(AddAssetEmployeeIDTextBox.Text);
+                NewAsset.comment = AddAssetCommentTextBox.Text;
+                if (Employee.CheckIfExists(NewAsset.EmployeeResponsible) == false)
+                {
+                    MessageBox.Show("this employee does not exist please try again");
+                    return;
+                }
+                asset.AddAsset(NewAsset);
+                MessageBox.Show("asset added");
+                AddAssetTextBox.Clear();
+                AddAssetEmployeeIDTextBox.Clear();
+                AddAssetCommentTextBox.Clear();
             }
-            while (HWIDCHECK == false);
-            
-            NewAsset.HardwareID = ID;
-            NewAsset.AssetName = AddAssetTextBox.Text;
-            NewAsset.EmployeeResponsible = Convert.ToInt32(AddAssetEmployeeIDTextBox.Text);
-            NewAsset.comment = AddAssetCommentTextBox.Text;
-            if (Employee.CheckIfExists(NewAsset.EmployeeResponsible) == false)
+            catch
             {
-                MessageBox.Show("this employee does not exist please try again");
-                return;
+                MessageBox.Show("please make sure all data is enterd correctly (i.e employee ID can not have letters");
             }
-            asset.AddAsset(NewAsset);
-            MessageBox.Show("asset added");
-            AddAssetTextBox.Clear();
-            AddAssetEmployeeIDTextBox.Clear();
-            AddAssetCommentTextBox.Clear();
         }
 
         private void AddAssetBackButton_Click(object sender, EventArgs e)
