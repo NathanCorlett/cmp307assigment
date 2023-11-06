@@ -15,6 +15,9 @@ using System.Diagnostics;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Management;
 
+
+
+
 namespace cmp307
 {
     public partial class AddAsset : Form
@@ -43,6 +46,12 @@ namespace cmp307
                 NewAsset.HardwareID = ID;
                 NewAsset.AssetName = AddAssetTextBox.Text;
                 NewAsset.EmployeeResponsible = Convert.ToInt32(AddAssetEmployeeIDTextBox.Text);
+                NewAsset.model = ModelBox.Text;
+                NewAsset.manufacturer = ManufacturerBox.Text;
+                NewAsset.type = TypeBox.Text;
+                NewAsset.IPadress = IPTextBox.Text;
+                NewAsset.DatePurchesed = DateTime.Parse(DateBox.Text);
+                NewAsset.SystemName = systemnamebox.Text;
                 NewAsset.comment = AddAssetCommentTextBox.Text;
                 if (Employee.CheckIfExists(NewAsset.EmployeeResponsible) == false)
                 {
@@ -79,7 +88,9 @@ namespace cmp307
                 if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
                 {
                     string IPadress = ip.ToString();
-                    IPTextBox.Text = IPadress; 
+
+                    IPTextBox.Text = IPadress;
+
                 }
             }
 
@@ -97,15 +108,14 @@ namespace cmp307
                 {
                     ManufacturerBox.Text = mo["Manufacturer"].ToString();
                     ModelBox.Text = mo["model"].ToString();
-                    
-                    
+
+
+
                 }
             }
 
 
+        }
 
-          
-
-        } 
     }
 }

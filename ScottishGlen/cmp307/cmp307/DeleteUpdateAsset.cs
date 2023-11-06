@@ -7,11 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Data.Entity.Infrastructure.Design.Executor;
+<
 
 namespace cmp307
 {
-    public partial class DeleteUpdateAsset : Form  //THIS PAGE BOTH DELETES AND UPDATES (WAS CHANGED PARTWAY THOUGH)
+    public partial class DeleteUpdateAsset : Form
+
     {
         public DeleteUpdateAsset()
         {
@@ -79,7 +80,9 @@ namespace cmp307
             this.Close();
         }
 
-        private void UpdateAssetButton_Click(object sender, EventArgs e)
+
+        private void Edit_Click(object sender, EventArgs e)
+
         {
             try
             {
