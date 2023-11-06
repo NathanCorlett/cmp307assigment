@@ -16,5 +16,16 @@ namespace cmp307
         {
             InitializeComponent();
         }
+
+        private void AddAsset_Click(object sender, EventArgs e)
+        {
+           AddAsset addAsset = new AddAsset();
+           this.Hide();
+           addAsset.ShowDialog();
+           this.Close();
+           
+
+
+        }
     }
 }

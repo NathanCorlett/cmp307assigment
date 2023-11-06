@@ -41,6 +41,7 @@
             this.AddAsset.TabIndex = 0;
             this.AddAsset.Text = "Add Asset";
             this.AddAsset.UseVisualStyleBackColor = true;
+            this.AddAsset.Click += new System.EventHandler(this.AddAsset_Click);
             // 
             // UpdateAsset
             // 

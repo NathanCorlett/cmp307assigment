@@ -94,6 +94,7 @@
             this.AddAssetButton.TabIndex = 6;
             this.AddAssetButton.Text = "Add Asset";
             this.AddAssetButton.UseVisualStyleBackColor = true;
+            this.AddAssetButton.Click += new System.EventHandler(this.AddAssetButton_Click);
             // 
             // AddAssetBackButton
             // 
@@ -103,6 +104,7 @@
             this.AddAssetBackButton.TabIndex = 7;
             this.AddAssetBackButton.Text = "Back";
             this.AddAssetBackButton.UseVisualStyleBackColor = true;
+            this.AddAssetBackButton.Click += new System.EventHandler(this.AddAssetBackButton_Click);
             // 
             // AddAsset
             // 

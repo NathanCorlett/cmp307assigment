@@ -16,5 +16,20 @@ namespace cmp307
         {
             InitializeComponent();
         }
+
+        private void AddAssetButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddAssetBackButton_Click(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
+
+
+        }
     }
 }
