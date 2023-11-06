@@ -34,6 +34,12 @@ namespace cmp307
                 int ID = 0;
                 asset NewAsset = new asset();
 
+                if (AddAssetTextBox == null)
+                {
+                    MessageBox.Show("please enter a name for the asset");
+                    return;
+                }
+
                 do
                 {
                     ID = random.Next();
