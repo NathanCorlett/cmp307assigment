@@ -11,7 +11,8 @@ namespace cmp307
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Linq;
+
     public partial class Employee
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -29,5 +30,25 @@ namespace cmp307
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<asset> assets { get; set; }
         public virtual Department Department { get; set; }
+
+        public static bool CheckIfExists(int ID)
+        {
+
+            using (mssql2100902Entities check = new mssql2100902Entities())
+            {
+                var find = check.Employees.Where(e => e.EmployeeID == ID).SingleOrDefault<Employee>();
+                if (find != null)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+               
+
+            
+        }
     }
 }

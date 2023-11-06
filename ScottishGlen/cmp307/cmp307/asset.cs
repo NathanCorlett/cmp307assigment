@@ -10,8 +10,12 @@
 namespace cmp307
 {
     using System;
+    using System.CodeDom;
     using System.Collections.Generic;
-    
+    using System.Data.SqlClient;
+    using System.Linq;
+    using System.Windows.Forms;
+
     public partial class asset
     {
         public int HardwareID { get; set; }
@@ -20,5 +24,33 @@ namespace cmp307
         public string comment { get; set; }
     
         public virtual Employee Employee { get; set; }
+
+        public static void AddAsset(asset NewAsset)
+        {
+            using (mssql2100902Entities NewA = new mssql2100902Entities())
+            {
+                    NewA.assets.Add(NewAsset);
+                    NewA.SaveChanges();
+              
+                            
+            }
+        }
+
+        public static bool CheckIDNum(int ID)
+        {
+            using (mssql2100902Entities check = new mssql2100902Entities())
+            {
+                var find = check.assets.Where(e => e.HardwareID == ID).SingleOrDefault<asset>();
+                if (find == null)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+       
     }
 }
