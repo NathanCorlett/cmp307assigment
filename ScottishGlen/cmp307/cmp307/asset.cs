@@ -83,10 +83,16 @@ namespace cmp307
             }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
        
 =======
 
 >>>>>>> AddDelete
+=======
+
+
+
+>>>>>>> 11ee678a0f23561dc5fbdaeb45de775dc0d12bbb
     }
 }
 //var find = update.inventories.Where(e => e.Product_ID == ToUpdate.Product_ID).SingleOrDefault<inventory>();

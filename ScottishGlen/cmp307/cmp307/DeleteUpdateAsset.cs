@@ -7,15 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Data.Entity.Infrastructure.Design.Executor;
+<
 
 namespace cmp307
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
     public partial class DeleteUpdateAsset : Form  //THIS PAGE BOTH DELETES AND UPDATES (WAS CHANGED PARTWAY THOUGH)
 =======
     public partial class DeleteUpdateAsset : Form
 >>>>>>> AddDelete
+=======
+    public partial class DeleteUpdateAsset : Form
+
+>>>>>>> 11ee678a0f23561dc5fbdaeb45de775dc0d12bbb
     {
         public DeleteUpdateAsset()
         {
@@ -84,10 +89,16 @@ namespace cmp307
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         private void UpdateAssetButton_Click(object sender, EventArgs e)
 =======
         private void Edit_Click(object sender, EventArgs e)
 >>>>>>> AddDelete
+=======
+
+        private void Edit_Click(object sender, EventArgs e)
+
+>>>>>>> 11ee678a0f23561dc5fbdaeb45de775dc0d12bbb
         {
             try
             {

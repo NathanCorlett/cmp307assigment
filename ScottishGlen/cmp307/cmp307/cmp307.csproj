@@ -47,9 +47,14 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Reference Include="System.Management.Instrumentation" />
 =======
 >>>>>>> AddDelete
+=======
+
+
+>>>>>>> 11ee678a0f23561dc5fbdaeb45de775dc0d12bbb
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
