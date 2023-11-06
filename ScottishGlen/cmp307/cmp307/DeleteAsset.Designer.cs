@@ -30,19 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.mssql2100902DataSet = new cmp307.mssql2100902DataSet();
-            this.assetsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.assetsTableAdapter = new cmp307.mssql2100902DataSetTableAdapters.assetsTableAdapter();
             this.hardwareIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeResponsibleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.assetNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assetsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mssql2100902DataSet = new cmp307.mssql2100902DataSet();
+            this.assetsTableAdapter = new cmp307.mssql2100902DataSetTableAdapters.assetsTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
-            this.SelectedAsset = new System.Windows.Forms.TextBox();
+            this.txtSelectedAsset = new System.Windows.Forms.TextBox();
             this.DeleteButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -60,20 +60,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(403, 423);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // mssql2100902DataSet
-            // 
-            this.mssql2100902DataSet.DataSetName = "mssql2100902DataSet";
-            this.mssql2100902DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // assetsBindingSource
-            // 
-            this.assetsBindingSource.DataMember = "assets";
-            this.assetsBindingSource.DataSource = this.mssql2100902DataSet;
-            // 
-            // assetsTableAdapter
-            // 
-            this.assetsTableAdapter.ClearBeforeFill = true;
             // 
             // hardwareIDDataGridViewTextBoxColumn
             // 
@@ -99,6 +85,20 @@
             this.commentDataGridViewTextBoxColumn.HeaderText = "comment";
             this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
             // 
+            // assetsBindingSource
+            // 
+            this.assetsBindingSource.DataMember = "assets";
+            this.assetsBindingSource.DataSource = this.mssql2100902DataSet;
+            // 
+            // mssql2100902DataSet
+            // 
+            this.mssql2100902DataSet.DataSetName = "mssql2100902DataSet";
+            this.mssql2100902DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // assetsTableAdapter
+            // 
+            this.assetsTableAdapter.ClearBeforeFill = true;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -108,17 +108,17 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Selected Assets ID:";
             // 
-            // SelectedAsset
+            // txtSelectedAsset
             // 
-            this.SelectedAsset.Location = new System.Drawing.Point(535, 20);
-            this.SelectedAsset.Name = "SelectedAsset";
-            this.SelectedAsset.ReadOnly = true;
-            this.SelectedAsset.Size = new System.Drawing.Size(129, 20);
-            this.SelectedAsset.TabIndex = 3;
+            this.txtSelectedAsset.Location = new System.Drawing.Point(535, 20);
+            this.txtSelectedAsset.Name = "txtSelectedAsset";
+            this.txtSelectedAsset.ReadOnly = true;
+            this.txtSelectedAsset.Size = new System.Drawing.Size(129, 20);
+            this.txtSelectedAsset.TabIndex = 3;
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(540, 71);
+            this.DeleteButton.Location = new System.Drawing.Point(466, 257);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(123, 82);
             this.DeleteButton.TabIndex = 4;
@@ -131,15 +131,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.DeleteButton);
-            this.Controls.Add(this.SelectedAsset);
+            this.Controls.Add(this.txtSelectedAsset);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "DeleteAsset";
             this.Text = "DeleteAsset";
             this.Load += new System.EventHandler(this.DeleteAsset_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,7 +156,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn assetNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn commentDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox SelectedAsset;
+        private System.Windows.Forms.TextBox txtSelectedAsset;
         private System.Windows.Forms.Button DeleteButton;
     }
 }

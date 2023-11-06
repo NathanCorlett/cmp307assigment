@@ -26,9 +26,10 @@ namespace cmp307
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.CurrentCell != null)
+            if (dataGridView1.CurrentCell.RowIndex != -1)
             {
-                
+                txtSelectedAsset.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+
             }
             
            
