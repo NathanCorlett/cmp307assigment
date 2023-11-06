@@ -76,6 +76,12 @@ namespace cmp307
                 find.AssetName = toUpdate.AssetName;
                 find.EmployeeResponsible = toUpdate.EmployeeResponsible;
                 find.comment = toUpdate.comment;
+                find.model = toUpdate.model; ;
+                find.manufacturer = toUpdate.manufacturer;
+                find.type = toUpdate.type;
+                find.IPadress = toUpdate.IPadress;
+                find.DatePurchesed = toUpdate.DatePurchesed;
+                find.SystemName = toUpdate.SystemName;
                 update.SaveChanges();
 
             }
