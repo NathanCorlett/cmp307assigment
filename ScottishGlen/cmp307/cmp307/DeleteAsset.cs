@@ -69,5 +69,13 @@ namespace cmp307
             dataGridView1.Update();
             dataGridView1.Refresh();
         }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
+        }
     }
 }

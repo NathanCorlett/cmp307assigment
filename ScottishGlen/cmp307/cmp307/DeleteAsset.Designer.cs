@@ -47,6 +47,7 @@
             this.AssetNameTextBox = new System.Windows.Forms.TextBox();
             this.EmployeeTextBox = new System.Windows.Forms.TextBox();
             this.Edit = new System.Windows.Forms.Button();
+            this.BackButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet)).BeginInit();
@@ -125,7 +126,7 @@
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(665, 242);
+            this.DeleteButton.Location = new System.Drawing.Point(570, 135);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(123, 82);
             this.DeleteButton.TabIndex = 4;
@@ -183,18 +184,29 @@
             // 
             // Edit
             // 
-            this.Edit.Location = new System.Drawing.Point(481, 242);
+            this.Edit.Location = new System.Drawing.Point(421, 135);
             this.Edit.Name = "Edit";
             this.Edit.Size = new System.Drawing.Size(123, 82);
             this.Edit.TabIndex = 11;
             this.Edit.Text = "Delete asset";
             this.Edit.UseVisualStyleBackColor = true;
             // 
+            // BackButton
+            // 
+            this.BackButton.Location = new System.Drawing.Point(702, 19);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(89, 53);
+            this.BackButton.TabIndex = 12;
+            this.BackButton.Text = "back";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
             // DeleteAsset
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.Edit);
             this.Controls.Add(this.EmployeeTextBox);
             this.Controls.Add(this.AssetNameTextBox);
@@ -237,5 +249,6 @@
         private System.Windows.Forms.TextBox AssetNameTextBox;
         private System.Windows.Forms.TextBox EmployeeTextBox;
         private System.Windows.Forms.Button Edit;
+        private System.Windows.Forms.Button BackButton;
     }
 }
