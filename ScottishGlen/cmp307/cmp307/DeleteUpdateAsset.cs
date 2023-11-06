@@ -11,7 +11,11 @@ using static System.Data.Entity.Infrastructure.Design.Executor;
 
 namespace cmp307
 {
+<<<<<<< HEAD
     public partial class DeleteUpdateAsset : Form  //THIS PAGE BOTH DELETES AND UPDATES (WAS CHANGED PARTWAY THOUGH)
+=======
+    public partial class DeleteUpdateAsset : Form
+>>>>>>> AddDelete
     {
         public DeleteUpdateAsset()
         {
@@ -79,7 +83,11 @@ namespace cmp307
             this.Close();
         }
 
+<<<<<<< HEAD
         private void UpdateAssetButton_Click(object sender, EventArgs e)
+=======
+        private void Edit_Click(object sender, EventArgs e)
+>>>>>>> AddDelete
         {
             try
             {

@@ -46,7 +46,10 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+<<<<<<< HEAD
     <Reference Include="System.Management.Instrumentation" />
+=======
+>>>>>>> AddDelete
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />

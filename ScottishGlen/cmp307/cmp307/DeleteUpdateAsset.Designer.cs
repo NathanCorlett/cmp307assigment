@@ -126,7 +126,7 @@
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(570, 135);
+            this.DeleteButton.Location = new System.Drawing.Point(561, 353);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(123, 82);
             this.DeleteButton.TabIndex = 4;
@@ -184,6 +184,7 @@
             // 
             // UpdateAssetButton
             // 
+<<<<<<< HEAD
             this.UpdateAssetButton.Location = new System.Drawing.Point(421, 135);
             this.UpdateAssetButton.Name = "UpdateAssetButton";
             this.UpdateAssetButton.Size = new System.Drawing.Size(123, 82);
@@ -191,6 +192,15 @@
             this.UpdateAssetButton.Text = "Update asset";
             this.UpdateAssetButton.UseVisualStyleBackColor = true;
             this.UpdateAssetButton.Click += new System.EventHandler(this.UpdateAssetButton_Click);
+=======
+            this.Edit.Location = new System.Drawing.Point(432, 353);
+            this.Edit.Name = "Edit";
+            this.Edit.Size = new System.Drawing.Size(123, 82);
+            this.Edit.TabIndex = 11;
+            this.Edit.Text = "update asset";
+            this.Edit.UseVisualStyleBackColor = true;
+            this.Edit.Click += new System.EventHandler(this.Edit_Click);
+>>>>>>> AddDelete
             // 
             // BackButton
             // 

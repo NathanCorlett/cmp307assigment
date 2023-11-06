@@ -17,13 +17,19 @@ namespace cmp307
     using System.Data.SqlClient;
     using System.Linq;
     using System.Windows.Forms;
-
+    
     public partial class asset
     {
         public int HardwareID { get; set; }
         public int EmployeeResponsible { get; set; }
         public string AssetName { get; set; }
         public string comment { get; set; }
+        public string model { get; set; }
+        public string manufacturer { get; set; }
+        public string type { get; set; }
+        public string IPadress { get; set; }
+        public Nullable<System.DateTime> DatePurchesed { get; set; }
+        public string SystemName { get; set; }
     
         public virtual Employee Employee { get; set; }
 
@@ -76,7 +82,11 @@ namespace cmp307
 
             }
         }
+<<<<<<< HEAD
        
+=======
+
+>>>>>>> AddDelete
     }
 }
 //var find = update.inventories.Where(e => e.Product_ID == ToUpdate.Product_ID).SingleOrDefault<inventory>();
