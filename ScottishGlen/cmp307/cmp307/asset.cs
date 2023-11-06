@@ -51,6 +51,16 @@ namespace cmp307
                 }
             }
         }
+
+        public static void DeleteAsset(long ID)
+        {
+            using (mssql2100902Entities check = new mssql2100902Entities())
+            {
+                var find = check.assets.Where(e => e.HardwareID == ID).SingleOrDefault<asset>();
+                check.assets.Remove(find);
+                check.SaveChanges();
+            }
+        }
        
     }
 }
