@@ -67,6 +67,12 @@
     <Compile Include="asset.cs">
       <DependentUpon>ScottishGlenModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DeleteAsset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteAsset.Designer.cs">
+      <DependentUpon>DeleteAsset.cs</DependentUpon>
+    </Compile>
     <Compile Include="Department.cs">
       <DependentUpon>ScottishGlenModel.tt</DependentUpon>
     </Compile>
@@ -78,6 +84,11 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mssql2100902DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mssql2100902DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,6 +110,9 @@
     <EmbeddedResource Include="AddAsset.resx">
       <DependentUpon>AddAsset.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeleteAsset.resx">
+      <DependentUpon>DeleteAsset.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +125,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="mssql2100902DataSet.xsc">
+      <DependentUpon>mssql2100902DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="mssql2100902DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mssql2100902DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mssql2100902DataSet.xss">
+      <DependentUpon>mssql2100902DataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

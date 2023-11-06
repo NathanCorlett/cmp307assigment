@@ -60,6 +60,7 @@
             this.DeleteAsset.TabIndex = 3;
             this.DeleteAsset.Text = "Delete Asset";
             this.DeleteAsset.UseVisualStyleBackColor = true;
+            this.DeleteAsset.Click += new System.EventHandler(this.DeleteAsset_Click);
             // 
             // Form1
             // 
