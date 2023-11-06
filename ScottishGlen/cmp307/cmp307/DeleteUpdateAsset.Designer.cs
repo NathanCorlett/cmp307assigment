@@ -46,9 +46,7 @@
             this.CommentTextBox = new System.Windows.Forms.TextBox();
             this.AssetNameTextBox = new System.Windows.Forms.TextBox();
             this.EmployeeTextBox = new System.Windows.Forms.TextBox();
-
             this.Edit = new System.Windows.Forms.Button();
-
             this.BackButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetsBindingSource)).BeginInit();
@@ -128,9 +126,7 @@
             // 
             // DeleteButton
             // 
-
             this.DeleteButton.Location = new System.Drawing.Point(561, 353);
-
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(123, 82);
             this.DeleteButton.TabIndex = 4;
@@ -186,21 +182,8 @@
             this.EmployeeTextBox.Size = new System.Drawing.Size(129, 20);
             this.EmployeeTextBox.TabIndex = 10;
             // 
-
             // Edit
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            this.UpdateAssetButton.Location = new System.Drawing.Point(421, 135);
-            this.UpdateAssetButton.Name = "UpdateAssetButton";
-            this.UpdateAssetButton.Size = new System.Drawing.Size(123, 82);
-            this.UpdateAssetButton.TabIndex = 11;
-            this.UpdateAssetButton.Text = "Update asset";
-            this.UpdateAssetButton.UseVisualStyleBackColor = true;
-            this.UpdateAssetButton.Click += new System.EventHandler(this.UpdateAssetButton_Click);
-=======
-=======
->>>>>>> 11ee678a0f23561dc5fbdaeb45de775dc0d12bbb
             this.Edit.Location = new System.Drawing.Point(432, 353);
             this.Edit.Name = "Edit";
             this.Edit.Size = new System.Drawing.Size(123, 82);
@@ -208,11 +191,6 @@
             this.Edit.Text = "update asset";
             this.Edit.UseVisualStyleBackColor = true;
             this.Edit.Click += new System.EventHandler(this.Edit_Click);
-<<<<<<< HEAD
->>>>>>> AddDelete
-=======
-
->>>>>>> 11ee678a0f23561dc5fbdaeb45de775dc0d12bbb
             // 
             // BackButton
             // 
@@ -224,17 +202,13 @@
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
-
             // DeleteAsset
-
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BackButton);
-
             this.Controls.Add(this.Edit);
-
             this.Controls.Add(this.EmployeeTextBox);
             this.Controls.Add(this.AssetNameTextBox);
             this.Controls.Add(this.CommentTextBox);
@@ -245,9 +219,7 @@
             this.Controls.Add(this.txtSelectedAsset);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-
             this.Name = "DeleteAsset";
-
             this.Text = "DeleteAsset";
             this.Load += new System.EventHandler(this.DeleteAsset_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -277,9 +249,7 @@
         private System.Windows.Forms.TextBox CommentTextBox;
         private System.Windows.Forms.TextBox AssetNameTextBox;
         private System.Windows.Forms.TextBox EmployeeTextBox;
-
         private System.Windows.Forms.Button Edit;
-
         private System.Windows.Forms.Button BackButton;
     }
 }

@@ -8,9 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Management;
-using System.Management.Instrumentation;
-using System.Diagnostics;
 
 namespace cmp307
 {
@@ -38,12 +35,6 @@ namespace cmp307
             this.Hide();
             deleteAsset.ShowDialog(); 
             this.Close();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            ManagementObjectSearcher serch = new ManagementObjectSearcher();
-            
         }
     }
 }

@@ -14,16 +14,7 @@ using System.Management.Instrumentation;
 using System.Diagnostics;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Management;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> AddDelete
-=======
-
-
-
->>>>>>> 11ee678a0f23561dc5fbdaeb45de775dc0d12bbb
 
 namespace cmp307
 {
@@ -95,17 +86,7 @@ namespace cmp307
                 if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
                 {
                     string IPadress = ip.ToString();
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    IPTextBox.Text = IPadress; 
-=======
                     IPTextBox.Text = IPadress;
->>>>>>> AddDelete
-=======
-
-                    IPTextBox.Text = IPadress;
-
->>>>>>> 11ee678a0f23561dc5fbdaeb45de775dc0d12bbb
                 }
             }
 
@@ -123,35 +104,12 @@ namespace cmp307
                 {
                     ManufacturerBox.Text = mo["Manufacturer"].ToString();
                     ModelBox.Text = mo["model"].ToString();
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    
-                    
-=======
 
 
->>>>>>> AddDelete
-=======
-
-
-
->>>>>>> 11ee678a0f23561dc5fbdaeb45de775dc0d12bbb
                 }
             }
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          
-
-        } 
-=======
         }
->>>>>>> AddDelete
-=======
-        }
-
->>>>>>> 11ee678a0f23561dc5fbdaeb45de775dc0d12bbb
     }
 }
