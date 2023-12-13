@@ -25,5 +25,66 @@ namespace cmp307
             this.departmentTableAdapter.Fill(this.mssql2100902DataSet3.Department);
 
         }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.CurrentCell.RowIndex != -1)
+            {
+                EmployeeIDBox.Text = dataGridView2.CurrentRow.Cells[0].Value.ToString();
+                FNameBox.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
+                SNameBox.Text = dataGridView2.CurrentRow.Cells[2].Value.ToString();
+                EmailBox.Text = dataGridView2.CurrentRow.Cells[3].Value.ToString();
+                DepartmentBox.Text = dataGridView2.CurrentRow.Cells[4].Value.ToString();
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.CurrentCell.RowIndex != -1)
+            {
+                DepartmentBox.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            }
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            int min = 1000;
+            int max = 9999;
+            int NewID = 0;
+
+            try
+            {
+                bool EmployeeIDCheck = true;
+
+                do
+                {
+                    NewID = random.Next(min, max);
+                    EmployeeIDCheck = Employee.CheckIfExists(NewID);
+                }
+                while (EmployeeIDCheck == true);
+
+                Employee employee = new Employee();
+                employee.EmployeeID = NewID;
+                employee.FName = FNameBox.Text;
+                employee.SName = SNameBox.Text;
+                employee.Email = EmailBox.Text;
+                employee.DepartmentID = Convert.ToInt16(DepartmentBox.Text);
+
+                Employee.AddEmployee(employee);
+                MessageBox.Show("employee added");
+                FNameBox.Clear();
+                SNameBox.Clear();
+                EmailBox.Clear();
+                DepartmentBox.Clear();
+                EmployeeIDBox.Clear();
+            }
+            catch
+            {
+                MessageBox.Show("please make sure all data is enterd correctly (i.e nothing is blank");
+            }
+
+
+        }
     }
 }

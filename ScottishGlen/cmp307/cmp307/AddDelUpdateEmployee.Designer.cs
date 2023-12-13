@@ -40,29 +40,29 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.mssql2100902DataSet3 = new cmp307.mssql2100902DataSet3();
-            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.departmentTableAdapter = new cmp307.mssql2100902DataSet3TableAdapters.DepartmentTableAdapter();
             this.departmeantIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departmentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mssql2100902DataSet3 = new cmp307.mssql2100902DataSet3();
+            this.departmentTableAdapter = new cmp307.mssql2100902DataSet3TableAdapters.DepartmentTableAdapter();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.mssql2100902DataSet4 = new cmp307.mssql2100902DataSet4();
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeeTableAdapter = new cmp307.mssql2100902DataSet4TableAdapters.EmployeeTableAdapter();
             this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mssql2100902DataSet4 = new cmp307.mssql2100902DataSet4();
+            this.employeeTableAdapter = new cmp307.mssql2100902DataSet4TableAdapters.EmployeeTableAdapter();
             this.AddButton = new System.Windows.Forms.Button();
             this.DelButton = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // EmployeeIDBox
@@ -159,20 +159,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(237, 223);
             this.dataGridView1.TabIndex = 10;
-            // 
-            // mssql2100902DataSet3
-            // 
-            this.mssql2100902DataSet3.DataSetName = "mssql2100902DataSet3";
-            this.mssql2100902DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // departmentBindingSource
-            // 
-            this.departmentBindingSource.DataMember = "Department";
-            this.departmentBindingSource.DataSource = this.mssql2100902DataSet3;
-            // 
-            // departmentTableAdapter
-            // 
-            this.departmentTableAdapter.ClearBeforeFill = true;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // departmeantIDDataGridViewTextBoxColumn
             // 
@@ -185,6 +172,20 @@
             this.departmentNameDataGridViewTextBoxColumn.DataPropertyName = "DepartmentName";
             this.departmentNameDataGridViewTextBoxColumn.HeaderText = "DepartmentName";
             this.departmentNameDataGridViewTextBoxColumn.Name = "departmentNameDataGridViewTextBoxColumn";
+            // 
+            // departmentBindingSource
+            // 
+            this.departmentBindingSource.DataMember = "Department";
+            this.departmentBindingSource.DataSource = this.mssql2100902DataSet3;
+            // 
+            // mssql2100902DataSet3
+            // 
+            this.mssql2100902DataSet3.DataSetName = "mssql2100902DataSet3";
+            this.mssql2100902DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // departmentTableAdapter
+            // 
+            this.departmentTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridView2
             // 
@@ -201,20 +202,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(328, 223);
             this.dataGridView2.TabIndex = 11;
-            // 
-            // mssql2100902DataSet4
-            // 
-            this.mssql2100902DataSet4.DataSetName = "mssql2100902DataSet4";
-            this.mssql2100902DataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataMember = "Employee";
-            this.employeeBindingSource.DataSource = this.mssql2100902DataSet4;
-            // 
-            // employeeTableAdapter
-            // 
-            this.employeeTableAdapter.ClearBeforeFill = true;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // employeeIDDataGridViewTextBoxColumn
             // 
@@ -246,6 +234,20 @@
             this.departmentIDDataGridViewTextBoxColumn.HeaderText = "DepartmentID";
             this.departmentIDDataGridViewTextBoxColumn.Name = "departmentIDDataGridViewTextBoxColumn";
             // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataMember = "Employee";
+            this.employeeBindingSource.DataSource = this.mssql2100902DataSet4;
+            // 
+            // mssql2100902DataSet4
+            // 
+            this.mssql2100902DataSet4.DataSetName = "mssql2100902DataSet4";
+            this.mssql2100902DataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // employeeTableAdapter
+            // 
+            this.employeeTableAdapter.ClearBeforeFill = true;
+            // 
             // AddButton
             // 
             this.AddButton.Location = new System.Drawing.Point(8, 334);
@@ -254,6 +256,7 @@
             this.AddButton.TabIndex = 12;
             this.AddButton.Text = "Add Employee";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // DelButton
             // 
@@ -297,11 +300,11 @@
             this.Text = "AddDelUpdateEmployee";
             this.Load += new System.EventHandler(this.AddDelUpdateEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

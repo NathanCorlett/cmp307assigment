@@ -12,6 +12,7 @@ namespace cmp307
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Security.Cryptography.X509Certificates;
 
     public partial class Employee
     {
@@ -47,8 +48,17 @@ namespace cmp307
                 }
             }
 
+            
 
+        }
 
+        public static void AddEmployee(Employee employee)
+        {
+            using (mssql2100902Entities NewE = new mssql2100902Entities())
+            {
+                NewE.Employees.Add(employee);
+                NewE.SaveChanges();
+            }
         }
     }
 }

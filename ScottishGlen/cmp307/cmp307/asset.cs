@@ -35,10 +35,10 @@ namespace cmp307
         {
             using (mssql2100902Entities NewA = new mssql2100902Entities())
             {
-                    NewA.assets.Add(NewAsset);
-                    NewA.SaveChanges();
-              
-                            
+                NewA.assets.Add(NewAsset);
+                NewA.SaveChanges();
+
+
             }
         }
 
