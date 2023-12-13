@@ -81,10 +81,63 @@ namespace cmp307
             }
             catch
             {
-                MessageBox.Show("please make sure all data is enterd correctly (i.e nothing is blank");
+                MessageBox.Show("please make sure all data is enterd correctly (i.e nothing is blank)");
             }
 
 
+        }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Employee ToUpdate = new Employee();
+                ToUpdate.EmployeeID = Convert.ToInt16(EmployeeIDBox.Text);
+                ToUpdate.FName = FNameBox.Text;
+                ToUpdate.SName = SNameBox.Text;
+                ToUpdate.Email = EmailBox.Text;
+                ToUpdate.DepartmentID = Convert.ToInt16(DepartmentBox.Text);
+
+                if (Employee.CheckIfExists(Convert.ToInt16(EmployeeIDBox.Text)) == false)
+                {
+                    MessageBox.Show("this employee does not exist please try again");
+                    return;
+                }
+
+                Employee.UpdateEmployee(ToUpdate);
+
+                MessageBox.Show("Employee updated");
+            }
+            catch
+            {
+                MessageBox.Show("please make sure all data is enterd correctly (i.e nothing is blank");
+            }
+        }
+
+        private void DelButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int ID = Convert.ToInt16(EmployeeIDBox.Text);
+                DialogResult dialogResults = MessageBox.Show("are you sure you want to delete the employee: " + ID, "Confirmation ", MessageBoxButtons.YesNo);
+
+
+                if (dialogResults == DialogResult.Yes)
+                {
+                    Employee.DelEmployee(ID);
+                    MessageBox.Show("employee deleted");
+
+
+                }
+                else if (dialogResults == DialogResult.Cancel)
+                {
+                    return;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("please make sure an employee is selected");
+            }
         }
     }
 }

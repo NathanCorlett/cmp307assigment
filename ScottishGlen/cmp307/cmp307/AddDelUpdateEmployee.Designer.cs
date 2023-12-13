@@ -266,6 +266,7 @@
             this.DelButton.TabIndex = 13;
             this.DelButton.Text = "Del Employee";
             this.DelButton.UseVisualStyleBackColor = true;
+            this.DelButton.Click += new System.EventHandler(this.DelButton_Click);
             // 
             // EditButton
             // 
@@ -275,6 +276,7 @@
             this.EditButton.TabIndex = 14;
             this.EditButton.Text = "Edit Employee";
             this.EditButton.UseVisualStyleBackColor = true;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // AddDelUpdateEmployee
             // 
