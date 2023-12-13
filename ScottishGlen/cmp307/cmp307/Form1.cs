@@ -36,5 +36,13 @@ namespace cmp307
             deleteAsset.ShowDialog(); 
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddDelUpdateEmployee addDelUpdateEmployee = new AddDelUpdateEmployee();
+            this.Hide();
+            addDelUpdateEmployee.ShowDialog();
+            this.Close();
+        }
     }
 }
