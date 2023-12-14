@@ -44,5 +44,26 @@ namespace cmp307
                 add.SaveChanges();
             }
         }
+
+        public static void EditSoftware(Software software)
+        {
+            using (mssql2100902Entities edit = new mssql2100902Entities())
+            {
+                var find = edit.Softwares.Where(e => e.SoftwareID == software.SoftwareID).SingleOrDefault<Software>();
+                find.SoftwareName = software.SoftwareName;
+                edit.SaveChanges();
+            }
+        }
+
+        public static void DelSoftware(int ID)
+        {
+            using (mssql2100902Entities del = new mssql2100902Entities())
+            {
+                var find = del.Softwares.Where(e => e.SoftwareID == ID).SingleOrDefault<Software>();
+                del.Softwares.Remove(find);
+                del.SaveChanges();
+            }
+                
     }
+}
 }

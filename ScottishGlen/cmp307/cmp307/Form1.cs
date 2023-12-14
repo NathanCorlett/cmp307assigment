@@ -52,5 +52,13 @@ namespace cmp307
             addSoftware.ShowDialog();
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EditDelSoftware editSoftware = new EditDelSoftware();
+            this.Hide();
+            editSoftware.ShowDialog();
+            this.Close();
+        }
     }
 }

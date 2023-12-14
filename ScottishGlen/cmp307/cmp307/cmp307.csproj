@@ -89,6 +89,12 @@
     <Compile Include="Department.cs">
       <DependentUpon>ScottishGlenModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="EditDelSoftware.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditDelSoftware.Designer.cs">
+      <DependentUpon>EditDelSoftware.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee.cs">
       <DependentUpon>ScottishGlenModel.tt</DependentUpon>
     </Compile>
@@ -128,6 +134,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>mssql2100902DataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="mssql2100902DataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mssql2100902DataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScottishGlenModel.Context.cs">
@@ -159,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteUpdateAsset.resx">
       <DependentUpon>DeleteUpdateAsset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDelSoftware.resx">
+      <DependentUpon>EditDelSoftware.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -238,6 +252,17 @@
     </None>
     <None Include="mssql2100902DataSet5.xss">
       <DependentUpon>mssql2100902DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="mssql2100902DataSet6.xsc">
+      <DependentUpon>mssql2100902DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="mssql2100902DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mssql2100902DataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mssql2100902DataSet6.xss">
+      <DependentUpon>mssql2100902DataSet6.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
