@@ -11,10 +11,38 @@ namespace cmp307
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Linq;
+    using System.Windows.Forms;
+
     public partial class Software
     {
         public int SoftwareID { get; set; }
         public string SoftwareName { get; set; }
+
+        public static bool CheckID(int ID)
+        {
+            using (mssql2100902Entities check = new mssql2100902Entities())
+            {
+                
+                var find = check.Softwares.Where(e => e.SoftwareID == ID).SingleOrDefault<Software>();
+                if (find == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
+
+        public static void AddSoftware(Software software)
+        {
+            using (mssql2100902Entities add = new mssql2100902Entities())
+            {
+                add.Softwares.Add(software);
+                add.SaveChanges();
+            }
+        }
     }
 }

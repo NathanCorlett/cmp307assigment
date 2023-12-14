@@ -78,12 +78,11 @@ namespace cmp307
         {
             using (mssql2100902Entities Del = new mssql2100902Entities())
             {
+                
                 var find = Del.Employees.Where(e => e.EmployeeID == ID).SingleOrDefault<Employee>();
                 Del.Employees.Remove(find);
                 Del.SaveChanges();
             }
         }
-
-
     }
 }

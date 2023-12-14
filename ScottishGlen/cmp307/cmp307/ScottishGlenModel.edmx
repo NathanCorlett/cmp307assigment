@@ -37,14 +37,14 @@
           <Property Name="SName" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Email" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="DepartmentID" Type="int" />
-          <Property Name="passowrd" Type="varchar" MaxLength="1" />
+          <Property Name="passowrd" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Software">
           <Key>
             <PropertyRef Name="SoftwareID" />
           </Key>
           <Property Name="SoftwareID" Type="int" Nullable="false" />
-          <Property Name="SoftwareName" Type="varchar" MaxLength="1" />
+          <Property Name="SoftwareName" Type="varchar" MaxLength="255" />
         </EntityType>
         <Association Name="FK__assets__Employee__489AC854">
           <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
@@ -124,7 +124,7 @@
           <Property Name="DepartmentID" Type="Int32" />
           <NavigationProperty Name="assets" Relationship="Self.FK__assets__Employee__489AC854" FromRole="Employee" ToRole="assets" />
           <NavigationProperty Name="Department" Relationship="Self.FK__Employee__Depart__47A6A41B" FromRole="Employee" ToRole="Department" />
-          <Property Name="passowrd" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="passowrd" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK__assets__Employee__489AC854">
           <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
@@ -169,7 +169,7 @@
             <PropertyRef Name="SoftwareID" />
           </Key>
           <Property Name="SoftwareID" Type="Int32" Nullable="false" />
-          <Property Name="SoftwareName" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SoftwareName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>

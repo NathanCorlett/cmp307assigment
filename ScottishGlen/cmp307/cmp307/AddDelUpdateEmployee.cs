@@ -139,5 +139,13 @@ namespace cmp307
                 MessageBox.Show("please make sure an employee is selected");
             }
         }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            this.Hide();
+            form1.ShowDialog();
+            this.Close();
+        }
     }
 }

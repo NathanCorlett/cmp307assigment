@@ -57,6 +57,7 @@
             this.AddButton = new System.Windows.Forms.Button();
             this.DelButton = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
+            this.BackBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet3)).BeginInit();
@@ -67,7 +68,7 @@
             // 
             // EmployeeIDBox
             // 
-            this.EmployeeIDBox.Location = new System.Drawing.Point(78, 35);
+            this.EmployeeIDBox.Location = new System.Drawing.Point(87, 95);
             this.EmployeeIDBox.Name = "EmployeeIDBox";
             this.EmployeeIDBox.ReadOnly = true;
             this.EmployeeIDBox.Size = new System.Drawing.Size(133, 20);
@@ -75,28 +76,28 @@
             // 
             // FNameBox
             // 
-            this.FNameBox.Location = new System.Drawing.Point(78, 61);
+            this.FNameBox.Location = new System.Drawing.Point(87, 121);
             this.FNameBox.Name = "FNameBox";
             this.FNameBox.Size = new System.Drawing.Size(133, 20);
             this.FNameBox.TabIndex = 1;
             // 
             // SNameBox
             // 
-            this.SNameBox.Location = new System.Drawing.Point(78, 87);
+            this.SNameBox.Location = new System.Drawing.Point(87, 147);
             this.SNameBox.Name = "SNameBox";
             this.SNameBox.Size = new System.Drawing.Size(133, 20);
             this.SNameBox.TabIndex = 2;
             // 
             // EmailBox
             // 
-            this.EmailBox.Location = new System.Drawing.Point(78, 113);
+            this.EmailBox.Location = new System.Drawing.Point(87, 173);
             this.EmailBox.Name = "EmailBox";
             this.EmailBox.Size = new System.Drawing.Size(133, 20);
             this.EmailBox.TabIndex = 3;
             // 
             // DepartmentBox
             // 
-            this.DepartmentBox.Location = new System.Drawing.Point(78, 139);
+            this.DepartmentBox.Location = new System.Drawing.Point(87, 199);
             this.DepartmentBox.Name = "DepartmentBox";
             this.DepartmentBox.ReadOnly = true;
             this.DepartmentBox.Size = new System.Drawing.Size(133, 20);
@@ -105,7 +106,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 38);
+            this.label1.Location = new System.Drawing.Point(14, 98);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 5;
@@ -114,7 +115,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 64);
+            this.label2.Location = new System.Drawing.Point(37, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 6;
@@ -123,7 +124,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 90);
+            this.label3.Location = new System.Drawing.Point(36, 150);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 7;
@@ -132,7 +133,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 116);
+            this.label4.Location = new System.Drawing.Point(46, 176);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 8;
@@ -141,7 +142,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 142);
+            this.label5.Location = new System.Drawing.Point(16, 202);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 9;
@@ -155,7 +156,7 @@
             this.departmeantIDDataGridViewTextBoxColumn,
             this.departmentNameDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.departmentBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(551, 35);
+            this.dataGridView1.Location = new System.Drawing.Point(560, 95);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(237, 223);
             this.dataGridView1.TabIndex = 10;
@@ -198,7 +199,7 @@
             this.emailDataGridViewTextBoxColumn,
             this.departmentIDDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.employeeBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(217, 35);
+            this.dataGridView2.Location = new System.Drawing.Point(226, 95);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(328, 223);
             this.dataGridView2.TabIndex = 11;
@@ -278,11 +279,22 @@
             this.EditButton.UseVisualStyleBackColor = true;
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
+            // BackBtn
+            // 
+            this.BackBtn.Location = new System.Drawing.Point(12, 11);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(126, 69);
+            this.BackBtn.TabIndex = 15;
+            this.BackBtn.Text = "Back";
+            this.BackBtn.UseVisualStyleBackColor = true;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
+            // 
             // AddDelUpdateEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.DelButton);
             this.Controls.Add(this.AddButton);
@@ -342,5 +354,6 @@
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button DelButton;
         private System.Windows.Forms.Button EditButton;
+        private System.Windows.Forms.Button BackBtn;
     }
 }
