@@ -58,6 +58,8 @@
             this.DelButton = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
             this.BackBtn = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.PsswordBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet3)).BeginInit();
@@ -97,7 +99,7 @@
             // 
             // DepartmentBox
             // 
-            this.DepartmentBox.Location = new System.Drawing.Point(87, 199);
+            this.DepartmentBox.Location = new System.Drawing.Point(87, 225);
             this.DepartmentBox.Name = "DepartmentBox";
             this.DepartmentBox.ReadOnly = true;
             this.DepartmentBox.Size = new System.Drawing.Size(133, 20);
@@ -142,7 +144,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 202);
+            this.label5.Location = new System.Drawing.Point(16, 228);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 9;
@@ -289,11 +291,29 @@
             this.BackBtn.UseVisualStyleBackColor = true;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(25, 202);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Password:";
+            // 
+            // PsswordBox
+            // 
+            this.PsswordBox.Location = new System.Drawing.Point(87, 199);
+            this.PsswordBox.Name = "PsswordBox";
+            this.PsswordBox.Size = new System.Drawing.Size(133, 20);
+            this.PsswordBox.TabIndex = 16;
+            // 
             // AddDelUpdateEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.PsswordBox);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.DelButton);
@@ -355,5 +375,7 @@
         private System.Windows.Forms.Button DelButton;
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.Button BackBtn;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox PsswordBox;
     }
 }

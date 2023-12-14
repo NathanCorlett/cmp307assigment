@@ -84,5 +84,37 @@ namespace cmp307
                 Del.SaveChanges();
             }
         }
+
+        public static bool CheckEmail(string Email)
+        {
+            using (mssql2100902Entities check = new mssql2100902Entities())
+            {
+                var find = check.Employees.Where(e => e.Email == Email).SingleOrDefault<Employee>();
+                if (find != null)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
+
+        public static bool CheckPass(string Pass)
+        {
+            using (mssql2100902Entities check = new mssql2100902Entities())
+            {
+                var find = check.Employees.Where(e => e.passowrd == Pass).SingleOrDefault<Employee>();
+                if (find != null)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
     }
 }

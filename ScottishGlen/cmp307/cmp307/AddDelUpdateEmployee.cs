@@ -16,7 +16,12 @@ namespace cmp307
         {
             InitializeComponent();
         }
-
+        private static string HashPassword(string password)
+        {
+            var NewPass = System.Text.ASCIIEncoding.ASCII.GetBytes(password);
+            NewPass = System.Security.Cryptography.MD5.Create().ComputeHash(NewPass);
+            return Convert.ToBase64String(NewPass);
+        }
         private void AddDelUpdateEmployee_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'mssql2100902DataSet4.Employee' table. You can move, or remove it, as needed.
@@ -53,6 +58,8 @@ namespace cmp307
             int max = 9999;
             int NewID = 0;
 
+            string NewPass = HashPassword(PsswordBox.Text);
+
             try
             {
                 bool EmployeeIDCheck = true;
@@ -70,6 +77,7 @@ namespace cmp307
                 employee.SName = SNameBox.Text;
                 employee.Email = EmailBox.Text;
                 employee.DepartmentID = Convert.ToInt16(DepartmentBox.Text);
+                employee.passowrd = NewPass;
 
                 Employee.AddEmployee(employee);
                 MessageBox.Show("employee added");
