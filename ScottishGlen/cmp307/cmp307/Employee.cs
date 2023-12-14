@@ -20,14 +20,14 @@ namespace cmp307
         {
             this.assets = new HashSet<asset>();
         }
-    
+
         public int EmployeeID { get; set; }
         public string FName { get; set; }
         public string SName { get; set; }
         public string Email { get; set; }
         public Nullable<int> DepartmentID { get; set; }
         public string passowrd { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<asset> assets { get; set; }
         public virtual Department Department { get; set; }
@@ -78,7 +78,7 @@ namespace cmp307
         {
             using (mssql2100902Entities Del = new mssql2100902Entities())
             {
-                
+
                 var find = Del.Employees.Where(e => e.EmployeeID == ID).SingleOrDefault<Employee>();
                 Del.Employees.Remove(find);
                 Del.SaveChanges();

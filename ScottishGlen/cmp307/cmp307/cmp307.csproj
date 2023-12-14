@@ -80,6 +80,12 @@
     <Compile Include="asset.cs">
       <DependentUpon>ScottishGlenModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="assetsoftwarelink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="assetsoftwarelink.Designer.cs">
+      <DependentUpon>assetsoftwarelink.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeleteUpdateAsset.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Instructions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructions.Designer.cs">
+      <DependentUpon>Instructions.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +131,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>mssql2100902DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="mssql2100902DataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mssql2100902DataSet10.xsd</DependentUpon>
     </Compile>
     <Compile Include="mssql2100902DataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -145,6 +162,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>mssql2100902DataSet6.xsd</DependentUpon>
     </Compile>
+    <Compile Include="mssql2100902DataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mssql2100902DataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="mssql2100902DataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mssql2100902DataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="mssql2100902DataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mssql2100902DataSet9.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScottishGlenModel.Context.cs">
@@ -165,6 +197,9 @@
     <Compile Include="Software.cs">
       <DependentUpon>ScottishGlenModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="SoftwareLink.cs">
+      <DependentUpon>ScottishGlenModel.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddAsset.resx">
       <DependentUpon>AddAsset.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +209,9 @@
     <EmbeddedResource Include="AddSoftware.resx">
       <DependentUpon>AddSoftware.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="assetsoftwarelink.resx">
+      <DependentUpon>assetsoftwarelink.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeleteUpdateAsset.resx">
       <DependentUpon>DeleteUpdateAsset.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructions.resx">
+      <DependentUpon>Instructions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -217,6 +258,17 @@
     </None>
     <None Include="mssql2100902DataSet1.xss">
       <DependentUpon>mssql2100902DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="mssql2100902DataSet10.xsc">
+      <DependentUpon>mssql2100902DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="mssql2100902DataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mssql2100902DataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mssql2100902DataSet10.xss">
+      <DependentUpon>mssql2100902DataSet10.xsd</DependentUpon>
     </None>
     <None Include="mssql2100902DataSet2.xsc">
       <DependentUpon>mssql2100902DataSet2.xsd</DependentUpon>
@@ -272,6 +324,39 @@
     </None>
     <None Include="mssql2100902DataSet6.xss">
       <DependentUpon>mssql2100902DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="mssql2100902DataSet7.xsc">
+      <DependentUpon>mssql2100902DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="mssql2100902DataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mssql2100902DataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mssql2100902DataSet7.xss">
+      <DependentUpon>mssql2100902DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="mssql2100902DataSet8.xsc">
+      <DependentUpon>mssql2100902DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="mssql2100902DataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mssql2100902DataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mssql2100902DataSet8.xss">
+      <DependentUpon>mssql2100902DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="mssql2100902DataSet9.xsc">
+      <DependentUpon>mssql2100902DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="mssql2100902DataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mssql2100902DataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mssql2100902DataSet9.xss">
+      <DependentUpon>mssql2100902DataSet9.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -33,6 +33,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.LinkBtn = new System.Windows.Forms.Button();
+            this.instructionBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AddAsset
@@ -85,11 +87,33 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // LinkBtn
+            // 
+            this.LinkBtn.Location = new System.Drawing.Point(307, 62);
+            this.LinkBtn.Name = "LinkBtn";
+            this.LinkBtn.Size = new System.Drawing.Size(140, 80);
+            this.LinkBtn.TabIndex = 7;
+            this.LinkBtn.Text = "asset/software links";
+            this.LinkBtn.UseVisualStyleBackColor = true;
+            this.LinkBtn.Click += new System.EventHandler(this.LinkBtn_Click);
+            // 
+            // instructionBtn
+            // 
+            this.instructionBtn.Location = new System.Drawing.Point(582, 332);
+            this.instructionBtn.Name = "instructionBtn";
+            this.instructionBtn.Size = new System.Drawing.Size(179, 100);
+            this.instructionBtn.TabIndex = 8;
+            this.instructionBtn.Text = "Instruction manual";
+            this.instructionBtn.UseVisualStyleBackColor = true;
+            this.instructionBtn.Click += new System.EventHandler(this.instructionBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.instructionBtn);
+            this.Controls.Add(this.LinkBtn);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -108,6 +132,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button LinkBtn;
+        private System.Windows.Forms.Button instructionBtn;
     }
 }
 

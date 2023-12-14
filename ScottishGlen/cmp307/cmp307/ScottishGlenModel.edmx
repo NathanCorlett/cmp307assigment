@@ -46,6 +46,15 @@
           <Property Name="SoftwareID" Type="int" Nullable="false" />
           <Property Name="SoftwareName" Type="varchar" MaxLength="255" />
         </EntityType>
+        <EntityType Name="SoftwareLink">
+          <Key>
+            <PropertyRef Name="LinkID" />
+          </Key>
+          <Property Name="LinkID" Type="int" Nullable="false" />
+          <Property Name="HardwareID" Type="int" />
+          <Property Name="SoftwareID" Type="int" />
+          <Property Name="DateOfLink" Type="date" />
+        </EntityType>
         <Association Name="FK__assets__Employee__489AC854">
           <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
           <End Role="assets" Type="Self.assets" Multiplicity="*" />
@@ -75,6 +84,7 @@
           <EntitySet Name="Department" EntityType="Self.Department" Schema="ScottishGlen" store:Type="Tables" />
           <EntitySet Name="Employee" EntityType="Self.Employee" Schema="ScottishGlen" store:Type="Tables" />
           <EntitySet Name="Software" EntityType="Self.Software" Schema="ScottishGlen" store:Type="Tables" />
+          <EntitySet Name="SoftwareLink" EntityType="Self.SoftwareLink" Schema="ScottishGlen" store:Type="Tables" />
           <AssociationSet Name="FK__assets__Employee__489AC854" Association="Self.FK__assets__Employee__489AC854">
             <End Role="Employee" EntitySet="Employee" />
             <End Role="assets" EntitySet="assets" />
@@ -163,6 +173,7 @@
             <End Role="Employee" EntitySet="Employees" />
           </AssociationSet>
           <EntitySet Name="Softwares" EntityType="mssql2100902Model.Software" />
+          <EntitySet Name="SoftwareLinks" EntityType="mssql2100902Model.SoftwareLink" />
         </EntityContainer>
         <EntityType Name="Software">
           <Key>
@@ -170,6 +181,15 @@
           </Key>
           <Property Name="SoftwareID" Type="Int32" Nullable="false" />
           <Property Name="SoftwareName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SoftwareLink">
+          <Key>
+            <PropertyRef Name="LinkID" />
+          </Key>
+          <Property Name="LinkID" Type="Int32" Nullable="false" />
+          <Property Name="HardwareID" Type="Int32" />
+          <Property Name="SoftwareID" Type="Int32" />
+          <Property Name="DateOfLink" Type="DateTime" Precision="0" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -219,6 +239,16 @@
               <MappingFragment StoreEntitySet="Software">
                 <ScalarProperty Name="SoftwareName" ColumnName="SoftwareName" />
                 <ScalarProperty Name="SoftwareID" ColumnName="SoftwareID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SoftwareLinks">
+            <EntityTypeMapping TypeName="mssql2100902Model.SoftwareLink">
+              <MappingFragment StoreEntitySet="SoftwareLink">
+                <ScalarProperty Name="DateOfLink" ColumnName="DateOfLink" />
+                <ScalarProperty Name="SoftwareID" ColumnName="SoftwareID" />
+                <ScalarProperty Name="HardwareID" ColumnName="HardwareID" />
+                <ScalarProperty Name="LinkID" ColumnName="LinkID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -12,7 +12,6 @@ namespace cmp307
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Windows.Forms;
 
     public partial class Software
     {
@@ -23,7 +22,7 @@ namespace cmp307
         {
             using (mssql2100902Entities check = new mssql2100902Entities())
             {
-                
+
                 var find = check.Softwares.Where(e => e.SoftwareID == ID).SingleOrDefault<Software>();
                 if (find == null)
                 {
@@ -63,7 +62,6 @@ namespace cmp307
                 del.Softwares.Remove(find);
                 del.SaveChanges();
             }
-                
+        }
     }
-}
 }

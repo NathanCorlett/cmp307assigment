@@ -60,5 +60,21 @@ namespace cmp307
             editSoftware.ShowDialog();
             this.Close();
         }
+
+        private void LinkBtn_Click(object sender, EventArgs e)
+        {
+            assetsoftwarelink assetsoftwarelink = new assetsoftwarelink();
+            this.Hide();
+            assetsoftwarelink.ShowDialog();
+            this.Close();
+        }
+
+        private void instructionBtn_Click(object sender, EventArgs e)
+        {
+            Instructions instructions = new Instructions();
+            this.Hide();
+            instructions.ShowDialog();
+            this.Close();
+        }
     }
 }
