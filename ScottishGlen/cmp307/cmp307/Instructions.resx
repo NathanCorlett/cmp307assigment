@@ -123,13 +123,20 @@
   <metadata name="mssql2100902DataSet10.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="softwareBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>196, 17</value>
-  </metadata>
-  <metadata name="mssql2100902DataSet10.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="softwareTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>372, 17</value>
   </metadata>
+  <data name="textBox2.Text" xml:space="preserve">
+    <value>How to use:
+
+when white text boxes are shown they are for data input from the user using the keyboard
+
+greyed out text boxes are for selecting data from an external source like the grid on the right
+it will show the companys current software assets and will allow you to select the text of the 
+asset you want. this will auto fill out all the data required. 
+
+the buttons labled will do as they say the one on this page will clear the text but on other pages 
+will be there for subbmitting data/confirming the action you would like to do
+</value>
+  </data>
 </root>

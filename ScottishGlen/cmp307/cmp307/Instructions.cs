@@ -40,5 +40,11 @@ namespace cmp307
 
             }
         }
+
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            SoftwareIDBox.Clear();
+            textBox1.Clear();
+        }
     }
 }
