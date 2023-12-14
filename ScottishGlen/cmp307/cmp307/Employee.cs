@@ -12,7 +12,6 @@ namespace cmp307
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Security.Cryptography.X509Certificates;
 
     public partial class Employee
     {
@@ -21,13 +20,14 @@ namespace cmp307
         {
             this.assets = new HashSet<asset>();
         }
-
+    
         public int EmployeeID { get; set; }
         public string FName { get; set; }
         public string SName { get; set; }
         public string Email { get; set; }
         public Nullable<int> DepartmentID { get; set; }
-
+        public string passowrd { get; set; }
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<asset> assets { get; set; }
         public virtual Department Department { get; set; }
@@ -48,7 +48,7 @@ namespace cmp307
                 }
             }
 
-            
+
 
         }
 
@@ -83,5 +83,7 @@ namespace cmp307
                 Del.SaveChanges();
             }
         }
+
+
     }
 }

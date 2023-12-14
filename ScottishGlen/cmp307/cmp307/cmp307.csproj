@@ -134,6 +134,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ScottishGlenModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Software.cs">
+      <DependentUpon>ScottishGlenModel.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddAsset.resx">
       <DependentUpon>AddAsset.cs</DependentUpon>
     </EmbeddedResource>

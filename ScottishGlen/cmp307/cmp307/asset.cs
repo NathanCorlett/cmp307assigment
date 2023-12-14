@@ -10,12 +10,9 @@
 namespace cmp307
 {
     using System;
-    using System.CodeDom;
     using System.Collections.Generic;
-    using System.Data.SqlClient;
     using System.Linq;
-    using System.Windows.Forms;
-    
+
     public partial class asset
     {
         public int HardwareID { get; set; }
@@ -28,7 +25,8 @@ namespace cmp307
         public string IPadress { get; set; }
         public Nullable<System.DateTime> DatePurchesed { get; set; }
         public string SystemName { get; set; }
-    
+        public string LinkedSoftware { get; set; }
+
         public virtual Employee Employee { get; set; }
 
         public static void AddAsset(asset NewAsset)
@@ -71,7 +69,7 @@ namespace cmp307
         public static void UpdateAsset(asset toUpdate)
         {
             using (mssql2100902Entities update = new mssql2100902Entities())
-            {
+            {             
                 var find = update.assets.Where(e => e.HardwareID == toUpdate.HardwareID).SingleOrDefault<asset>();
                 find.AssetName = toUpdate.AssetName;
                 find.EmployeeResponsible = toUpdate.EmployeeResponsible;
@@ -86,6 +84,5 @@ namespace cmp307
 
             }
         }
-
     }
 }
