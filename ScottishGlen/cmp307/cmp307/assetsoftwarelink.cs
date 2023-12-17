@@ -19,7 +19,7 @@ namespace cmp307
             InitializeComponent();
         }
 
-        private void BackBtn_Click(object sender, EventArgs e)
+        private void BackBtn_Click(object sender, EventArgs e) //go back to main form when button clicked
         {
             Form1 form1 = new Form1();
             this.Hide();
@@ -40,8 +40,10 @@ namespace cmp307
 
         }
 
-        private void linkBtn_Click(object sender, EventArgs e)
+    //cerate new link
+        private void linkBtn_Click(object sender, EventArgs e) 
         {
+            
             Random random = new Random();
             int ID = 0;
             bool IDCheck = false;
@@ -50,28 +52,43 @@ namespace cmp307
             
             try
             {
+                //gets date automatically for link
                 string Date = "";
                 Date = DateTime.Now.ToString("dd/MM/yyyy");
-
+                if (string.IsNullOrWhiteSpace(SoftwareIDBox.Text) || string.IsNullOrWhiteSpace(HardWareIDBox.Text))
+                {
+                    MessageBox.Show("please make sure data is enterd in both boxes");
+                    return;
+                }
                 do
                 {
+                    //make random id and check if it exists, if id does not exist program continuies if not makes new id
                     ID = random.Next(min, max);
                     IDCheck = SoftwareLink.CheckIDNum(ID);
                 }
                 while (IDCheck == false);
 
+                //cerate new software link object with data from textboxes and id and date
                 SoftwareLink softwareLink = new SoftwareLink();
                 softwareLink.LinkID = ID;
                 softwareLink.SoftwareID = Convert.ToInt32(SoftwareIDBox.Text);
                 softwareLink.HardwareID = Convert.ToInt32(HardWareIDBox.Text);
                 softwareLink.DateOfLink = DateTime.Parse(Date);
-                SoftwareLink.AddLink(softwareLink);
+
+                //update database to show link
+                SoftwareLink.AddLink(softwareLink); 
                 
             }
+            //if exeption is thrown it means not all data is enterd properly informs the user of this
             catch
             {
                 MessageBox.Show("please make sure data is enterd in both boxes");
             }
+
+            //updates datagrid views and refreshes page
+            this.softwareLinkTableAdapter.Fill(this.mssql2100902DataSet9.SoftwareLink);
+            this.softwareTableAdapter.Fill(this.mssql2100902DataSet8.Software);
+            this.assetsTableAdapter.Fill(this.mssql2100902DataSet7.assets);
             dataGridView1.Update();
             dataGridView1.Refresh();
             dataGridView2.Update();
@@ -84,6 +101,8 @@ namespace cmp307
 
         }
 
+        //next 3 functoions do the same thing for there respective datagridview
+        //when text in grid is clicked all respecteve information is placed in the correct textboxes 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView1.CurrentCell.RowIndex != -1)
@@ -111,16 +130,19 @@ namespace cmp307
             }
         }
 
+        //deleted link
         private void DelBtn_Click(object sender, EventArgs e)
         {
             try
             {
+                //checks if user would like to continiue
                 int id = Convert.ToInt32(LinkIDBox.Text);
                 DialogResult dialogResults = MessageBox.Show("are you sure you want to delete the asset/software link " + id, "Confirmation ", MessageBoxButtons.YesNo);
 
 
                 if (dialogResults == DialogResult.Yes)
                 {
+                    //if yes delete link using link id
                     SoftwareLink.DelLink(id);
                     MessageBox.Show("asset link deleted");
 
@@ -128,14 +150,20 @@ namespace cmp307
                 }
                 else if (dialogResults == DialogResult.Cancel)
                 {
+                    //if no do nothing and return
                     return;
                 }
             }
+            //if exeption is thrown it means not all data is enterd properly informs the user of this
             catch
             {
                 MessageBox.Show("make sure there is data enterd in the box");
             }
-            LinkIDBox.Clear();
+
+            //updates datagrid views and refreshes page
+            this.softwareLinkTableAdapter.Fill(this.mssql2100902DataSet9.SoftwareLink);
+            this.softwareTableAdapter.Fill(this.mssql2100902DataSet8.Software);
+            this.assetsTableAdapter.Fill(this.mssql2100902DataSet7.assets);
             dataGridView1.Update();
             dataGridView1.Refresh();
             dataGridView2.Update();

@@ -17,7 +17,7 @@ namespace cmp307
             InitializeComponent();
         }
 
-        private void DeleteAsset_Load(object sender, EventArgs e)
+        private void DeleteAsset_Load(object sender, EventArgs e) //fills datagrid views on startup
         {
             // TODO: This line of code loads data into the 'mssql2100902DataSet2.assets' table. You can move, or remove it, as needed.
             this.assetsTableAdapter1.Fill(this.mssql2100902DataSet2.assets);
@@ -26,7 +26,7 @@ namespace cmp307
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) //when an item from the grid is selected  enters all avaliable data into the respective textboxes
         {
             if (dataGridView1.CurrentCell.RowIndex != -1)
             {
@@ -45,15 +45,16 @@ namespace cmp307
            
         }
 
-        private void DeleteButton_Click(object sender, EventArgs e)
+        private void DeleteButton_Click(object sender, EventArgs e)  //deletes selected asset using its ID
         {
             try
             {
                 long ID = Convert.ToInt64(txtSelectedAsset.Text);
+                //checks to see if the user has selected the correct asset
                 DialogResult dialogResults = MessageBox.Show("are you sure you want to delete the asset " + ID, "Confirmation ", MessageBoxButtons.YesNo);
  
-
-                if (dialogResults == DialogResult.Yes)
+                //if yes delete if no dont do anything
+                if (dialogResults == DialogResult.Yes) 
                 {
                     asset.DeleteAsset(ID);
                     MessageBox.Show("asset deleted");
@@ -65,10 +66,11 @@ namespace cmp307
                     return;
                 }
             }
-            catch
+            catch //if data is not enterd an exeption will be throwen this catches it and tells the user to make sure everything needed is enterd
             {
                 MessageBox.Show("please make sure to select an option");
             }
+            //clears text boxes and refreshes the page with new info
             txtSelectedAsset.Clear();
             EmployeeTextBox.Clear();
             AssetNameTextBox.Clear();
@@ -87,7 +89,7 @@ namespace cmp307
 
         }
 
-        private void BackButton_Click(object sender, EventArgs e)
+        private void BackButton_Click(object sender, EventArgs e) //goes back to menu fourm
         {
             Form1 form = new Form1();
             this.Hide();
@@ -99,6 +101,7 @@ namespace cmp307
         {
             try
             {
+                //cerates new asset object and inserts all data from the text boxes into there respective variables
                 asset ToUpdate = new asset();
                 ToUpdate.HardwareID = (int)(long)Convert.ToDouble(txtSelectedAsset.Text);
                 ToUpdate.AssetName = AssetNameTextBox.Text;
@@ -111,22 +114,23 @@ namespace cmp307
                 ToUpdate.comment = CommentTextBox.Text;
                 ToUpdate.manufacturer = ManufacturerBox.Text;
 
-                if (Employee.CheckIfExists(ToUpdate.EmployeeResponsible) == false)
+                if (Employee.CheckIfExists(ToUpdate.EmployeeResponsible) == false) //check if asset exists
                 {
-                    MessageBox.Show("this employee does not exist please try again");
+                    MessageBox.Show("this employee does not exist please try again"); //if does not exist return and tell user
                     return;
                 }
 
-                asset.UpdateAsset(ToUpdate);
+                asset.UpdateAsset(ToUpdate); //if exists will update the asset database with new info
 
-                MessageBox.Show("asset updated");
+                MessageBox.Show("asset updated"); //tell user asset has been updates
 
             }
-            catch
+            catch //if any needed data is not enterd an exeption will be throwen this catches it and tells the user to make sure everything needed is enterd
             {
                 MessageBox.Show("make sure all data is enterd correctly, Employee ID can not have letters");
             }
 
+            //clears text boxes and refreshes the page with new info
             txtSelectedAsset.Clear();
             EmployeeTextBox.Clear();
             AssetNameTextBox.Clear();
@@ -145,7 +149,7 @@ namespace cmp307
 
         }
 
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e) //if anything in row is clicked fill text boxes with correct data
         {
             if (dataGridView1.CurrentCell.RowIndex != -1)
             {

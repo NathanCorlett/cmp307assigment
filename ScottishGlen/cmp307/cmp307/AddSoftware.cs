@@ -17,13 +17,16 @@ namespace cmp307
             InitializeComponent();
         }
 
+        //loads data to grid view 
         private void AddSoftware_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'mssql2100902DataSet5.Software' table. You can move, or remove it, as needed.
-            this.softwareTableAdapter.Fill(this.mssql2100902DataSet5.Software);
+            // TODO: This line of code loads data into the 'mssql2100902DataSet12.Software' table. You can move, or remove it, as needed.
+            this.softwareTableAdapter2.Fill(this.mssql2100902DataSet12.Software);
+
 
         }
 
+        //goes back to main form
         private void BackBtn_Click(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();
@@ -33,6 +36,7 @@ namespace cmp307
 
         }
 
+        //adds software
         private void AddSoftwareBtn_Click(object sender, EventArgs e)
         {
             Random random = new Random();
@@ -42,28 +46,40 @@ namespace cmp307
 
             try
             {
+                //makes sure the text box has info enterd before continuing
+                if (string.IsNullOrWhiteSpace(SoftwareNameBox.Text))
+                {
+                    MessageBox.Show("please make sure all data is enterd correcty and try again");
+                    return;
+                }
                 bool checkidexists = true;
                 do
                 {
+                    //makes new id and checks if it exists if keep doing until id that is new is made
                     newID = random.Next(min, max);
                     checkidexists = Software.CheckID(newID);
                 }
                 while (checkidexists == true);
 
+                //cerates new software object with name from textbox and new id
                 Software New = new Software();
                 New.SoftwareName = SoftwareNameBox.Text;
                 New.SoftwareID = newID;
 
+                //adds new sotware asses
                 Software.AddSoftware(New);
 
+                //informs user and clears box
                 MessageBox.Show("Software added");
                 SoftwareNameBox.Clear();
             }
             catch 
             {
+                //if no data was enterd an exeption will be thown
                 MessageBox.Show("please make sure all data is enterd correcty and try again");
            
             }
+
         }
     }
 }

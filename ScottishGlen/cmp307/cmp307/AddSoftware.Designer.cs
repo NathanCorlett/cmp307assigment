@@ -33,15 +33,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SoftwareNameBox = new System.Windows.Forms.TextBox();
             this.AddSoftwareBtn = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.mssql2100902DataSet5 = new cmp307.mssql2100902DataSet5();
             this.softwareBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mssql2100902DataSet5 = new cmp307.mssql2100902DataSet5();
             this.softwareTableAdapter = new cmp307.mssql2100902DataSet5TableAdapters.SoftwareTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.softwareIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.softwareNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet5)).BeginInit();
+            this.softwareBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.mssql2100902DataSet11 = new cmp307.mssql2100902DataSet11();
+            this.softwareTableAdapter1 = new cmp307.mssql2100902DataSet11TableAdapters.SoftwareTableAdapter();
+            this.mssql2100902DataSet12 = new cmp307.mssql2100902DataSet12();
+            this.softwareBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.softwareTableAdapter2 = new cmp307.mssql2100902DataSet12TableAdapters.SoftwareTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.softwareBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.softwareBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.softwareBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // BackBtn
@@ -80,6 +90,20 @@
             this.AddSoftwareBtn.UseVisualStyleBackColor = true;
             this.AddSoftwareBtn.Click += new System.EventHandler(this.AddSoftwareBtn_Click);
             // 
+            // softwareBindingSource
+            // 
+            this.softwareBindingSource.DataMember = "Software";
+            this.softwareBindingSource.DataSource = this.mssql2100902DataSet5;
+            // 
+            // mssql2100902DataSet5
+            // 
+            this.mssql2100902DataSet5.DataSetName = "mssql2100902DataSet5";
+            this.mssql2100902DataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // softwareTableAdapter
+            // 
+            this.softwareTableAdapter.ClearBeforeFill = true;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
@@ -87,25 +111,11 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.softwareIDDataGridViewTextBoxColumn,
             this.softwareNameDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.softwareBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(384, 12);
+            this.dataGridView1.DataSource = this.softwareBindingSource2;
+            this.dataGridView1.Location = new System.Drawing.Point(442, 27);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(368, 412);
+            this.dataGridView1.Size = new System.Drawing.Size(327, 386);
             this.dataGridView1.TabIndex = 4;
-            // 
-            // mssql2100902DataSet5
-            // 
-            this.mssql2100902DataSet5.DataSetName = "mssql2100902DataSet5";
-            this.mssql2100902DataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // softwareBindingSource
-            // 
-            this.softwareBindingSource.DataMember = "Software";
-            this.softwareBindingSource.DataSource = this.mssql2100902DataSet5;
-            // 
-            // softwareTableAdapter
-            // 
-            this.softwareTableAdapter.ClearBeforeFill = true;
             // 
             // softwareIDDataGridViewTextBoxColumn
             // 
@@ -118,6 +128,34 @@
             this.softwareNameDataGridViewTextBoxColumn.DataPropertyName = "SoftwareName";
             this.softwareNameDataGridViewTextBoxColumn.HeaderText = "SoftwareName";
             this.softwareNameDataGridViewTextBoxColumn.Name = "softwareNameDataGridViewTextBoxColumn";
+            // 
+            // softwareBindingSource1
+            // 
+            this.softwareBindingSource1.DataMember = "Software";
+            this.softwareBindingSource1.DataSource = this.mssql2100902DataSet11;
+            // 
+            // mssql2100902DataSet11
+            // 
+            this.mssql2100902DataSet11.DataSetName = "mssql2100902DataSet11";
+            this.mssql2100902DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // softwareTableAdapter1
+            // 
+            this.softwareTableAdapter1.ClearBeforeFill = true;
+            // 
+            // mssql2100902DataSet12
+            // 
+            this.mssql2100902DataSet12.DataSetName = "mssql2100902DataSet12";
+            this.mssql2100902DataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // softwareBindingSource2
+            // 
+            this.softwareBindingSource2.DataMember = "Software";
+            this.softwareBindingSource2.DataSource = this.mssql2100902DataSet12;
+            // 
+            // softwareTableAdapter2
+            // 
+            this.softwareTableAdapter2.ClearBeforeFill = true;
             // 
             // AddSoftware
             // 
@@ -132,9 +170,13 @@
             this.Name = "AddSoftware";
             this.Text = "AddSoftware";
             this.Load += new System.EventHandler(this.AddSoftware_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.softwareBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.softwareBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,11 +188,17 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox SoftwareNameBox;
         private System.Windows.Forms.Button AddSoftwareBtn;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private mssql2100902DataSet5 mssql2100902DataSet5;
         private System.Windows.Forms.BindingSource softwareBindingSource;
         private mssql2100902DataSet5TableAdapters.SoftwareTableAdapter softwareTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private mssql2100902DataSet11 mssql2100902DataSet11;
+        private System.Windows.Forms.BindingSource softwareBindingSource1;
+        private mssql2100902DataSet11TableAdapters.SoftwareTableAdapter softwareTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn softwareIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn softwareNameDataGridViewTextBoxColumn;
+        private mssql2100902DataSet12 mssql2100902DataSet12;
+        private System.Windows.Forms.BindingSource softwareBindingSource2;
+        private mssql2100902DataSet12TableAdapters.SoftwareTableAdapter softwareTableAdapter2;
     }
 }

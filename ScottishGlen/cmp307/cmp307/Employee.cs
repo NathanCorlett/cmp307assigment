@@ -90,7 +90,7 @@ namespace cmp307
             using (mssql2100902Entities check = new mssql2100902Entities())
             {
                 var find = check.Employees.Where(e => e.Email == Email).SingleOrDefault<Employee>();
-                if (find != null)
+                if (find == null)
                 {
                     return false;
                 }
@@ -106,7 +106,7 @@ namespace cmp307
             using (mssql2100902Entities check = new mssql2100902Entities())
             {
                 var find = check.Employees.Where(e => e.passowrd == Pass).SingleOrDefault<Employee>();
-                if (find != null)
+                if (find == null)
                 {
                     return false;
                 }

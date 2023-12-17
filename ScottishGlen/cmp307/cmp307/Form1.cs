@@ -18,6 +18,7 @@ namespace cmp307
             InitializeComponent();
         }
 
+        // all funtions do the same thing for there respective buttons. cerates new fourm depending on button clicked and closes this one
         private void AddAsset_Click(object sender, EventArgs e)
         {
            AddAsset addAsset = new AddAsset();

@@ -16,6 +16,8 @@ namespace cmp307
         {
             InitializeComponent();
         }
+
+        //hash and salt password so it is securly saved
         private static string HashPassword(string password)
         {
             var NewPass = System.Text.ASCIIEncoding.ASCII.GetBytes(password);
@@ -31,6 +33,7 @@ namespace cmp307
 
         }
 
+        //if data in grid selected add info to text boxes
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView1.CurrentCell.RowIndex != -1)
@@ -43,6 +46,7 @@ namespace cmp307
             }
         }
 
+        //
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView1.CurrentCell.RowIndex != -1)
@@ -51,6 +55,7 @@ namespace cmp307
             }
         }
 
+        //addes new uses to database
         private void AddButton_Click(object sender, EventArgs e)
         {
             Random random = new Random();
@@ -58,7 +63,14 @@ namespace cmp307
             int max = 9999;
             int NewID = 0;
 
+            //hashes and salts password
             string NewPass = HashPassword(PsswordBox.Text);
+
+            if (string.IsNullOrWhiteSpace(FNameBox.Text) || string.IsNullOrWhiteSpace(SNameBox.Text) || string.IsNullOrWhiteSpace(EmailBox.Text) || string.IsNullOrWhiteSpace(PsswordBox.Text))
+            {
+                MessageBox.Show("please make sure all data is enterd correctly (i.e nothing is blank)");
+                return;
+            }
 
             try
             {
@@ -66,11 +78,13 @@ namespace cmp307
 
                 do
                 {
+                    //makes and checks id can be used if not try again
                     NewID = random.Next(min, max);
                     EmployeeIDCheck = Employee.CheckIfExists(NewID);
                 }
                 while (EmployeeIDCheck == true);
 
+                //cerates new object for employee and adds data
                 Employee employee = new Employee();
                 employee.EmployeeID = NewID;
                 employee.FName = FNameBox.Text;
@@ -79,6 +93,7 @@ namespace cmp307
                 employee.DepartmentID = Convert.ToInt16(DepartmentBox.Text);
                 employee.passowrd = NewPass;
 
+                //adds employe to database and clears text boxes
                 Employee.AddEmployee(employee);
                 MessageBox.Show("employee added");
                 FNameBox.Clear();
@@ -92,13 +107,26 @@ namespace cmp307
                 MessageBox.Show("please make sure all data is enterd correctly (i.e nothing is blank)");
             }
 
+            //update page with correct info
+            this.employeeTableAdapter.Fill(this.mssql2100902DataSet4.Employee);
+            this.departmentTableAdapter.Fill(this.mssql2100902DataSet3.Department);
+            dataGridView1.Update();
+            dataGridView1.Refresh();
+            dataGridView2.Update();
+            dataGridView2.Refresh();
+            this.Update();
+            this.Refresh();
+
 
         }
 
+
+        //edits emplotyee details
         private void EditButton_Click(object sender, EventArgs e)
         {
             try
             {
+                //cerates new object for employee and adds data
                 Employee ToUpdate = new Employee();
                 ToUpdate.EmployeeID = Convert.ToInt16(EmployeeIDBox.Text);
                 ToUpdate.FName = FNameBox.Text;
@@ -106,12 +134,14 @@ namespace cmp307
                 ToUpdate.Email = EmailBox.Text;
                 ToUpdate.DepartmentID = Convert.ToInt16(DepartmentBox.Text);
 
+                //checks if employee exists
                 if (Employee.CheckIfExists(Convert.ToInt16(EmployeeIDBox.Text)) == false)
                 {
                     MessageBox.Show("this employee does not exist please try again");
                     return;
                 }
 
+                //updates database and tells suer
                 Employee.UpdateEmployee(ToUpdate);
 
                 MessageBox.Show("Employee updated");
@@ -120,18 +150,33 @@ namespace cmp307
             {
                 MessageBox.Show("please make sure all data is enterd correctly (i.e nothing is blank");
             }
+
+            //update page with correct info
+            this.employeeTableAdapter.Fill(this.mssql2100902DataSet4.Employee);
+            this.departmentTableAdapter.Fill(this.mssql2100902DataSet3.Department);
+            dataGridView1.Update();
+            dataGridView1.Refresh();
+            dataGridView2.Update();
+            dataGridView2.Refresh();
+            this.Update();
+            this.Refresh();
         }
 
+        //deletes user
         private void DelButton_Click(object sender, EventArgs e)
         {
             try
             {
+
                 int ID = Convert.ToInt16(EmployeeIDBox.Text);
+
+                //checks if user wants to do this
                 DialogResult dialogResults = MessageBox.Show("are you sure you want to delete the employee: " + ID, "Confirmation ", MessageBoxButtons.YesNo);
 
 
                 if (dialogResults == DialogResult.Yes)
                 {
+                    //if yes delete user
                     Employee.DelEmployee(ID);
                     MessageBox.Show("employee deleted");
 
@@ -139,6 +184,7 @@ namespace cmp307
                 }
                 else if (dialogResults == DialogResult.Cancel)
                 {
+                    //if no do nothing
                     return;
                 }
             }
@@ -146,8 +192,19 @@ namespace cmp307
             {
                 MessageBox.Show("please make sure an employee is selected");
             }
+
+            //refresh page with correct info
+            this.employeeTableAdapter.Fill(this.mssql2100902DataSet4.Employee);
+            this.departmentTableAdapter.Fill(this.mssql2100902DataSet3.Department);
+            dataGridView1.Update();
+            dataGridView1.Refresh();
+            dataGridView2.Update();
+            dataGridView2.Refresh();
+            this.Update();
+            this.Refresh();
         }
 
+        //go back to main pag
         private void BackBtn_Click(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();

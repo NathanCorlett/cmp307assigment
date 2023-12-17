@@ -18,6 +18,7 @@ namespace cmp307
             InitializeComponent();
         }
 
+        //hases and salts enterd password so it will match what is in the database
         private static string HashPass(string s)
         {
             var Pass = System.Text.ASCIIEncoding.ASCII.GetBytes(s);
@@ -25,6 +26,7 @@ namespace cmp307
             return Convert.ToBase64String(Pass);
         }
 
+        //checks if credentials are correct
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             string password = PassBox.Text;
@@ -35,11 +37,13 @@ namespace cmp307
             bool CorrectPass = false;
             bool CorrectEmail = false;
 
+            //ckecks email and pass for correct credentials
             CorrectPass = Employee.CheckPass(password);
             CorrectEmail = Employee.CheckEmail(email);
 
             if (CorrectPass == true && CorrectEmail == true)
             {
+                //if both are correct continiue
                 Form1 form1 = new Form1();
                 this.Hide();
                 form1.ShowDialog();
@@ -47,6 +51,7 @@ namespace cmp307
             }
             else
             {
+                //if one is wrong tell user
                 MessageBox.Show("incorrect Password or email please try again");
                 PassBox.Clear();
             }

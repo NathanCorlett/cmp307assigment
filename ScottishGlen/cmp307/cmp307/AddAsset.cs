@@ -28,6 +28,11 @@ namespace cmp307
 
         private void AddAssetButton_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(AddAssetTextBox.Text) || string.IsNullOrWhiteSpace(AddAssetEmployeeIDTextBox.Text))
+            {
+                MessageBox.Show("please make sure all data is enterd correctly (asset name and employee MUST be filled in and date must be enterd correctly");
+                return;
+            }
             try
             {
                 bool HWIDCHECK = false;
@@ -70,7 +75,7 @@ namespace cmp307
             }
             catch
             {
-                MessageBox.Show("please make sure all data is enterd correctly (i.e employee ID can not have letters");
+                MessageBox.Show("please make sure all data is enterd correctly (i.e date must be enterd correctly");
             }
         }
 
@@ -117,6 +122,11 @@ namespace cmp307
                 }
             }
 
+            this.employeeTableAdapter.Fill(this.mssql2100902DataSet1.Employee);
+            dataGridView1.Update();
+            dataGridView1.Refresh();
+            this.Update();
+            this.Refresh();
 
         }
 
