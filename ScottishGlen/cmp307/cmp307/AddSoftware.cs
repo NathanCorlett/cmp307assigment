@@ -79,6 +79,11 @@ namespace cmp307
                 MessageBox.Show("please make sure all data is enterd correcty and try again");
            
             }
+            this.softwareTableAdapter2.Fill(this.mssql2100902DataSet12.Software);
+            dataGridView1.Update();
+            dataGridView1.Refresh();
+            this.Update();
+            this.Refresh();
 
         }
     }

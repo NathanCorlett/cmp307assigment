@@ -124,26 +124,52 @@ namespace cmp307
         //edits emplotyee details
         private void EditButton_Click(object sender, EventArgs e)
         {
+            //string NewPass = HashPassword(PsswordBox.Text);
             try
             {
+                
+                if (string.IsNullOrWhiteSpace(PsswordBox.Text))
+                {
+                    Employee ToUpdate = new Employee();
+                    ToUpdate.EmployeeID = Convert.ToInt16(EmployeeIDBox.Text);
+                    ToUpdate.FName = FNameBox.Text;
+                    ToUpdate.SName = SNameBox.Text;
+                    ToUpdate.Email = EmailBox.Text;
+                    ToUpdate.DepartmentID = Convert.ToInt16(DepartmentBox.Text);
+
+                    if (Employee.CheckIfExists(Convert.ToInt16(EmployeeIDBox.Text)) == false)
+                    {
+                        MessageBox.Show("this employee does not exist please try again");
+                        return;
+                    }
+
+                    Employee.UpdateEmployee(ToUpdate);
+                }
+                else
+                {
+                    string NewPass = HashPassword(PsswordBox.Text);
+                    Employee ToUpdate = new Employee();
+                    ToUpdate.EmployeeID = Convert.ToInt16(EmployeeIDBox.Text);
+                    ToUpdate.FName = FNameBox.Text;
+                    ToUpdate.SName = SNameBox.Text;
+                    ToUpdate.Email = EmailBox.Text;
+                    ToUpdate.passowrd = NewPass;
+                    ToUpdate.DepartmentID = Convert.ToInt16(DepartmentBox.Text);
+
+                    if (Employee.CheckIfExists(Convert.ToInt16(EmployeeIDBox.Text)) == false)
+                    {
+                        MessageBox.Show("this employee does not exist please try again");
+                        return;
+                    }
+                    Employee.UpdateEmployeeWithPass(ToUpdate);
+                }
                 //cerates new object for employee and adds data
-                Employee ToUpdate = new Employee();
-                ToUpdate.EmployeeID = Convert.ToInt16(EmployeeIDBox.Text);
-                ToUpdate.FName = FNameBox.Text;
-                ToUpdate.SName = SNameBox.Text;
-                ToUpdate.Email = EmailBox.Text;
-                ToUpdate.DepartmentID = Convert.ToInt16(DepartmentBox.Text);
+                
+                
 
                 //checks if employee exists
-                if (Employee.CheckIfExists(Convert.ToInt16(EmployeeIDBox.Text)) == false)
-                {
-                    MessageBox.Show("this employee does not exist please try again");
-                    return;
-                }
-
-                //updates database and tells suer
-                Employee.UpdateEmployee(ToUpdate);
-
+                
+                
                 MessageBox.Show("Employee updated");
             }
             catch

@@ -74,6 +74,20 @@ namespace cmp307
             }
         }
 
+        public static void UpdateEmployeeWithPass(Employee ToUpdate)
+        {
+            using (mssql2100902Entities Update = new mssql2100902Entities())
+            {
+                var find = Update.Employees.Where(e => e.EmployeeID == ToUpdate.EmployeeID).SingleOrDefault<Employee>();
+                find.FName = ToUpdate.FName;
+                find.SName = ToUpdate.SName;
+                find.Email = ToUpdate.Email;
+                find.DepartmentID = ToUpdate.DepartmentID;
+                find.passowrd = ToUpdate.passowrd;
+                Update.SaveChanges();
+            }
+        }
+
         public static void DelEmployee(int ID)
         {
             using (mssql2100902Entities Del = new mssql2100902Entities())
