@@ -51,6 +51,7 @@ namespace cmp307
             }
             //refreshes page with new info
             this.softwareTableAdapter.Fill(this.mssql2100902DataSet6.Software);
+            NameBox.Clear();
             dataGridView1.Update();
             dataGridView1.Refresh();
             this.Update();
@@ -85,6 +86,7 @@ namespace cmp307
                 MessageBox.Show("please make sure to select an option");
             }
             //refresh form for new data
+            NameBox.Clear();
             this.softwareTableAdapter.Fill(this.mssql2100902DataSet6.Software);
             dataGridView1.Update();
             dataGridView1.Refresh();

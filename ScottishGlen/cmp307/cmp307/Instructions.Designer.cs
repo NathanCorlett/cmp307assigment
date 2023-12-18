@@ -68,6 +68,7 @@
             this.dataGridView1.DataSource = this.softwareBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(543, 10);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(245, 231);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -77,12 +78,14 @@
             this.softwareIDDataGridViewTextBoxColumn.DataPropertyName = "SoftwareID";
             this.softwareIDDataGridViewTextBoxColumn.HeaderText = "SoftwareID";
             this.softwareIDDataGridViewTextBoxColumn.Name = "softwareIDDataGridViewTextBoxColumn";
+            this.softwareIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // softwareNameDataGridViewTextBoxColumn
             // 
             this.softwareNameDataGridViewTextBoxColumn.DataPropertyName = "SoftwareName";
             this.softwareNameDataGridViewTextBoxColumn.HeaderText = "SoftwareName";
             this.softwareNameDataGridViewTextBoxColumn.Name = "softwareNameDataGridViewTextBoxColumn";
+            this.softwareNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // softwareBindingSource
             // 

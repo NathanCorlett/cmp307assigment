@@ -96,11 +96,7 @@ namespace cmp307
                 //adds employe to database and clears text boxes
                 Employee.AddEmployee(employee);
                 MessageBox.Show("employee added");
-                FNameBox.Clear();
-                SNameBox.Clear();
-                EmailBox.Clear();
-                DepartmentBox.Clear();
-                EmployeeIDBox.Clear();
+                
             }
             catch
             {
@@ -108,6 +104,12 @@ namespace cmp307
             }
 
             //update page with correct info
+            FNameBox.Clear();
+            SNameBox.Clear();
+            EmailBox.Clear();
+            PsswordBox.Clear();
+            DepartmentBox.Clear();
+            EmployeeIDBox.Clear();
             this.employeeTableAdapter.Fill(this.mssql2100902DataSet4.Employee);
             this.departmentTableAdapter.Fill(this.mssql2100902DataSet3.Department);
             dataGridView1.Update();
@@ -178,6 +180,12 @@ namespace cmp307
             }
 
             //update page with correct info
+            FNameBox.Clear();
+            SNameBox.Clear();
+            EmailBox.Clear();
+            PsswordBox.Clear();
+            DepartmentBox.Clear();
+            EmployeeIDBox.Clear();
             this.employeeTableAdapter.Fill(this.mssql2100902DataSet4.Employee);
             this.departmentTableAdapter.Fill(this.mssql2100902DataSet3.Department);
             dataGridView1.Update();
@@ -220,6 +228,12 @@ namespace cmp307
             }
 
             //refresh page with correct info
+            FNameBox.Clear();
+            SNameBox.Clear();
+            EmailBox.Clear();
+            PsswordBox.Clear();
+            DepartmentBox.Clear();
+            EmployeeIDBox.Clear();
             this.employeeTableAdapter.Fill(this.mssql2100902DataSet4.Employee);
             this.departmentTableAdapter.Fill(this.mssql2100902DataSet3.Department);
             dataGridView1.Update();

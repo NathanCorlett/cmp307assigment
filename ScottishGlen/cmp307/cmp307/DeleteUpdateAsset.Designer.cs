@@ -56,9 +56,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtSelectedAsset = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.mssql2100902DataSet2 = new cmp307.mssql2100902DataSet2();
-            this.assetsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.assetsTableAdapter1 = new cmp307.mssql2100902DataSet2TableAdapters.assetsTableAdapter();
             this.hardwareIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeResponsibleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.assetNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,11 +66,14 @@
             this.iPadressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datePurchesedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.systemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assetsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.mssql2100902DataSet2 = new cmp307.mssql2100902DataSet2();
+            this.assetsTableAdapter1 = new cmp307.mssql2100902DataSet2TableAdapters.assetsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.assetsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // assetsBindingSource
@@ -300,83 +300,94 @@
             this.dataGridView1.DataSource = this.assetsBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(16, 12);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(372, 426);
             this.dataGridView1.TabIndex = 40;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
-            // 
-            // mssql2100902DataSet2
-            // 
-            this.mssql2100902DataSet2.DataSetName = "mssql2100902DataSet2";
-            this.mssql2100902DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // assetsBindingSource1
-            // 
-            this.assetsBindingSource1.DataMember = "assets";
-            this.assetsBindingSource1.DataSource = this.mssql2100902DataSet2;
-            // 
-            // assetsTableAdapter1
-            // 
-            this.assetsTableAdapter1.ClearBeforeFill = true;
             // 
             // hardwareIDDataGridViewTextBoxColumn
             // 
             this.hardwareIDDataGridViewTextBoxColumn.DataPropertyName = "HardwareID";
             this.hardwareIDDataGridViewTextBoxColumn.HeaderText = "HardwareID";
             this.hardwareIDDataGridViewTextBoxColumn.Name = "hardwareIDDataGridViewTextBoxColumn";
+            this.hardwareIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // employeeResponsibleDataGridViewTextBoxColumn
             // 
             this.employeeResponsibleDataGridViewTextBoxColumn.DataPropertyName = "EmployeeResponsible";
             this.employeeResponsibleDataGridViewTextBoxColumn.HeaderText = "EmployeeResponsible";
             this.employeeResponsibleDataGridViewTextBoxColumn.Name = "employeeResponsibleDataGridViewTextBoxColumn";
+            this.employeeResponsibleDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // assetNameDataGridViewTextBoxColumn
             // 
             this.assetNameDataGridViewTextBoxColumn.DataPropertyName = "AssetName";
             this.assetNameDataGridViewTextBoxColumn.HeaderText = "AssetName";
             this.assetNameDataGridViewTextBoxColumn.Name = "assetNameDataGridViewTextBoxColumn";
+            this.assetNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // commentDataGridViewTextBoxColumn
             // 
             this.commentDataGridViewTextBoxColumn.DataPropertyName = "comment";
             this.commentDataGridViewTextBoxColumn.HeaderText = "comment";
             this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
+            this.commentDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // modelDataGridViewTextBoxColumn
             // 
             this.modelDataGridViewTextBoxColumn.DataPropertyName = "model";
             this.modelDataGridViewTextBoxColumn.HeaderText = "model";
             this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // manufacturerDataGridViewTextBoxColumn
             // 
             this.manufacturerDataGridViewTextBoxColumn.DataPropertyName = "manufacturer";
             this.manufacturerDataGridViewTextBoxColumn.HeaderText = "manufacturer";
             this.manufacturerDataGridViewTextBoxColumn.Name = "manufacturerDataGridViewTextBoxColumn";
+            this.manufacturerDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // typeDataGridViewTextBoxColumn
             // 
             this.typeDataGridViewTextBoxColumn.DataPropertyName = "type";
             this.typeDataGridViewTextBoxColumn.HeaderText = "type";
             this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // iPadressDataGridViewTextBoxColumn
             // 
             this.iPadressDataGridViewTextBoxColumn.DataPropertyName = "IPadress";
             this.iPadressDataGridViewTextBoxColumn.HeaderText = "IPadress";
             this.iPadressDataGridViewTextBoxColumn.Name = "iPadressDataGridViewTextBoxColumn";
+            this.iPadressDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // datePurchesedDataGridViewTextBoxColumn
             // 
             this.datePurchesedDataGridViewTextBoxColumn.DataPropertyName = "DatePurchesed";
             this.datePurchesedDataGridViewTextBoxColumn.HeaderText = "DatePurchesed";
             this.datePurchesedDataGridViewTextBoxColumn.Name = "datePurchesedDataGridViewTextBoxColumn";
+            this.datePurchesedDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // systemNameDataGridViewTextBoxColumn
             // 
             this.systemNameDataGridViewTextBoxColumn.DataPropertyName = "SystemName";
             this.systemNameDataGridViewTextBoxColumn.HeaderText = "SystemName";
             this.systemNameDataGridViewTextBoxColumn.Name = "systemNameDataGridViewTextBoxColumn";
+            this.systemNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // assetsBindingSource1
+            // 
+            this.assetsBindingSource1.DataMember = "assets";
+            this.assetsBindingSource1.DataSource = this.mssql2100902DataSet2;
+            // 
+            // mssql2100902DataSet2
+            // 
+            this.mssql2100902DataSet2.DataSetName = "mssql2100902DataSet2";
+            this.mssql2100902DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // assetsTableAdapter1
+            // 
+            this.assetsTableAdapter1.ClearBeforeFill = true;
             // 
             // DeleteUpdateAsset
             // 
@@ -413,8 +424,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.assetsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

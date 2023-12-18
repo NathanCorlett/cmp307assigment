@@ -86,6 +86,9 @@ namespace cmp307
             }
 
             //updates datagrid views and refreshes page
+            SoftwareIDBox.Clear(); 
+            HardWareIDBox.Clear();
+            LinkIDBox.Clear();
             this.softwareLinkTableAdapter.Fill(this.mssql2100902DataSet9.SoftwareLink);
             this.softwareTableAdapter.Fill(this.mssql2100902DataSet8.Software);
             this.assetsTableAdapter.Fill(this.mssql2100902DataSet7.assets);
@@ -161,6 +164,9 @@ namespace cmp307
             }
 
             //updates datagrid views and refreshes page
+            SoftwareIDBox.Clear();
+            HardWareIDBox.Clear();
+            LinkIDBox.Clear();
             this.softwareLinkTableAdapter.Fill(this.mssql2100902DataSet9.SoftwareLink);
             this.softwareTableAdapter.Fill(this.mssql2100902DataSet8.Software);
             this.assetsTableAdapter.Fill(this.mssql2100902DataSet7.assets);

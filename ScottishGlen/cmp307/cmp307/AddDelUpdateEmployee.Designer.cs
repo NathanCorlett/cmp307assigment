@@ -160,6 +160,7 @@
             this.dataGridView1.DataSource = this.departmentBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(560, 95);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(237, 223);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -169,12 +170,14 @@
             this.departmeantIDDataGridViewTextBoxColumn.DataPropertyName = "DepartmeantID";
             this.departmeantIDDataGridViewTextBoxColumn.HeaderText = "DepartmeantID";
             this.departmeantIDDataGridViewTextBoxColumn.Name = "departmeantIDDataGridViewTextBoxColumn";
+            this.departmeantIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // departmentNameDataGridViewTextBoxColumn
             // 
             this.departmentNameDataGridViewTextBoxColumn.DataPropertyName = "DepartmentName";
             this.departmentNameDataGridViewTextBoxColumn.HeaderText = "DepartmentName";
             this.departmentNameDataGridViewTextBoxColumn.Name = "departmentNameDataGridViewTextBoxColumn";
+            this.departmentNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // departmentBindingSource
             // 
@@ -203,6 +206,7 @@
             this.dataGridView2.DataSource = this.employeeBindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(226, 95);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(328, 223);
             this.dataGridView2.TabIndex = 11;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
@@ -212,30 +216,35 @@
             this.employeeIDDataGridViewTextBoxColumn.DataPropertyName = "EmployeeID";
             this.employeeIDDataGridViewTextBoxColumn.HeaderText = "EmployeeID";
             this.employeeIDDataGridViewTextBoxColumn.Name = "employeeIDDataGridViewTextBoxColumn";
+            this.employeeIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // fNameDataGridViewTextBoxColumn
             // 
             this.fNameDataGridViewTextBoxColumn.DataPropertyName = "FName";
             this.fNameDataGridViewTextBoxColumn.HeaderText = "FName";
             this.fNameDataGridViewTextBoxColumn.Name = "fNameDataGridViewTextBoxColumn";
+            this.fNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // sNameDataGridViewTextBoxColumn
             // 
             this.sNameDataGridViewTextBoxColumn.DataPropertyName = "SName";
             this.sNameDataGridViewTextBoxColumn.HeaderText = "SName";
             this.sNameDataGridViewTextBoxColumn.Name = "sNameDataGridViewTextBoxColumn";
+            this.sNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // emailDataGridViewTextBoxColumn
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
             this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // departmentIDDataGridViewTextBoxColumn
             // 
             this.departmentIDDataGridViewTextBoxColumn.DataPropertyName = "DepartmentID";
             this.departmentIDDataGridViewTextBoxColumn.HeaderText = "DepartmentID";
             this.departmentIDDataGridViewTextBoxColumn.Name = "departmentIDDataGridViewTextBoxColumn";
+            this.departmentIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // employeeBindingSource
             // 

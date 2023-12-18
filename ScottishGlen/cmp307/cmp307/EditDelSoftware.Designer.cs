@@ -35,16 +35,16 @@
             this.IDBox = new System.Windows.Forms.TextBox();
             this.NameBox = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.mssql2100902DataSet6 = new cmp307.mssql2100902DataSet6();
-            this.softwareBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.softwareTableAdapter = new cmp307.mssql2100902DataSet6TableAdapters.SoftwareTableAdapter();
             this.softwareIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.softwareNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.softwareBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mssql2100902DataSet6 = new cmp307.mssql2100902DataSet6();
+            this.softwareTableAdapter = new cmp307.mssql2100902DataSet6TableAdapters.SoftwareTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet6)).BeginInit();
             this.SuspendLayout();
             // 
             // BackBtn
@@ -102,35 +102,38 @@
             this.dataGridView1.DataSource = this.softwareBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(322, 11);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(243, 427);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // mssql2100902DataSet6
-            // 
-            this.mssql2100902DataSet6.DataSetName = "mssql2100902DataSet6";
-            this.mssql2100902DataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // softwareBindingSource
-            // 
-            this.softwareBindingSource.DataMember = "Software";
-            this.softwareBindingSource.DataSource = this.mssql2100902DataSet6;
-            // 
-            // softwareTableAdapter
-            // 
-            this.softwareTableAdapter.ClearBeforeFill = true;
             // 
             // softwareIDDataGridViewTextBoxColumn
             // 
             this.softwareIDDataGridViewTextBoxColumn.DataPropertyName = "SoftwareID";
             this.softwareIDDataGridViewTextBoxColumn.HeaderText = "SoftwareID";
             this.softwareIDDataGridViewTextBoxColumn.Name = "softwareIDDataGridViewTextBoxColumn";
+            this.softwareIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // softwareNameDataGridViewTextBoxColumn
             // 
             this.softwareNameDataGridViewTextBoxColumn.DataPropertyName = "SoftwareName";
             this.softwareNameDataGridViewTextBoxColumn.HeaderText = "SoftwareName";
             this.softwareNameDataGridViewTextBoxColumn.Name = "softwareNameDataGridViewTextBoxColumn";
+            this.softwareNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // softwareBindingSource
+            // 
+            this.softwareBindingSource.DataMember = "Software";
+            this.softwareBindingSource.DataSource = this.mssql2100902DataSet6;
+            // 
+            // mssql2100902DataSet6
+            // 
+            this.mssql2100902DataSet6.DataSetName = "mssql2100902DataSet6";
+            this.mssql2100902DataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // softwareTableAdapter
+            // 
+            this.softwareTableAdapter.ClearBeforeFill = true;
             // 
             // label1
             // 
@@ -167,8 +170,8 @@
             this.Text = "EditDelSoftware";
             this.Load += new System.EventHandler(this.EditDelSoftware_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

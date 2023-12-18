@@ -50,17 +50,17 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.mssql2100902DataSet1 = new cmp307.mssql2100902DataSet1();
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeeTableAdapter = new cmp307.mssql2100902DataSet1TableAdapters.EmployeeTableAdapter();
             this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mssql2100902DataSet1 = new cmp307.mssql2100902DataSet1();
+            this.employeeTableAdapter = new cmp307.mssql2100902DataSet1TableAdapters.EmployeeTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -243,53 +243,59 @@
             this.dataGridView1.DataSource = this.employeeBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(437, 114);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(313, 323);
             this.dataGridView1.TabIndex = 20;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // mssql2100902DataSet1
-            // 
-            this.mssql2100902DataSet1.DataSetName = "mssql2100902DataSet1";
-            this.mssql2100902DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataMember = "Employee";
-            this.employeeBindingSource.DataSource = this.mssql2100902DataSet1;
-            // 
-            // employeeTableAdapter
-            // 
-            this.employeeTableAdapter.ClearBeforeFill = true;
             // 
             // employeeIDDataGridViewTextBoxColumn
             // 
             this.employeeIDDataGridViewTextBoxColumn.DataPropertyName = "EmployeeID";
             this.employeeIDDataGridViewTextBoxColumn.HeaderText = "EmployeeID";
             this.employeeIDDataGridViewTextBoxColumn.Name = "employeeIDDataGridViewTextBoxColumn";
+            this.employeeIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // fNameDataGridViewTextBoxColumn
             // 
             this.fNameDataGridViewTextBoxColumn.DataPropertyName = "FName";
             this.fNameDataGridViewTextBoxColumn.HeaderText = "FName";
             this.fNameDataGridViewTextBoxColumn.Name = "fNameDataGridViewTextBoxColumn";
+            this.fNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // sNameDataGridViewTextBoxColumn
             // 
             this.sNameDataGridViewTextBoxColumn.DataPropertyName = "SName";
             this.sNameDataGridViewTextBoxColumn.HeaderText = "SName";
             this.sNameDataGridViewTextBoxColumn.Name = "sNameDataGridViewTextBoxColumn";
+            this.sNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // emailDataGridViewTextBoxColumn
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
             this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // departmentIDDataGridViewTextBoxColumn
             // 
             this.departmentIDDataGridViewTextBoxColumn.DataPropertyName = "DepartmentID";
             this.departmentIDDataGridViewTextBoxColumn.HeaderText = "DepartmentID";
             this.departmentIDDataGridViewTextBoxColumn.Name = "departmentIDDataGridViewTextBoxColumn";
+            this.departmentIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataMember = "Employee";
+            this.employeeBindingSource.DataSource = this.mssql2100902DataSet1;
+            // 
+            // mssql2100902DataSet1
+            // 
+            this.mssql2100902DataSet1.DataSetName = "mssql2100902DataSet1";
+            this.mssql2100902DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // employeeTableAdapter
+            // 
+            this.employeeTableAdapter.ClearBeforeFill = true;
             // 
             // AddAsset
             // 
@@ -321,8 +327,8 @@
             this.Text = "AddAsset";
             this.Load += new System.EventHandler(this.AddAsset_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2100902DataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

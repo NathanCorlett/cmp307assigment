@@ -69,8 +69,14 @@ namespace cmp307
                 }
                 asset.AddAsset(NewAsset);
                 MessageBox.Show("asset added");
-                AddAssetTextBox.Clear();
+                AddAssetTextBox.Clear(); 
                 AddAssetEmployeeIDTextBox.Clear();
+                ModelBox.Clear();
+                ManufacturerBox.Clear();
+                TypeBox.Clear();
+                IPTextBox.Clear();
+                DateBox.Clear();
+                systemnamebox.Clear();
                 AddAssetCommentTextBox.Clear();
             }
             catch
@@ -121,6 +127,7 @@ namespace cmp307
 
                 }
             }
+
 
             this.employeeTableAdapter.Fill(this.mssql2100902DataSet1.Employee);
             dataGridView1.Update();
